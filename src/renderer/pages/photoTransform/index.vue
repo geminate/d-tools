@@ -1,25 +1,34 @@
 <template>
     <div>
         <div class="photo-transform">
+
             <div class="base64-container">
-                <div class="el-upload el-upload--text el-upload-dragger img-container"
-                     :class="{'is-dragover':isDragOver}"
-                     @dragenter.stop.prevent="onDragIn"
-                     @dragover.stop.prevent="onDragIn"
-                     @dragleave.stop.prevent="onDragLeave"
-                     @drop.stop.prevent="onDrop"
-                     @click="chooseImg"
-                     :style="{backgroundImage: 'url('+base64Data+')'}"
-                >
-                    <div class="fit-div" v-if="!base64Data">
-                        <i class="el-icon-upload"></i>
-                        <div class="el-upload__text" v-html="infoText"></div>
+
+                <div class="img-container">
+                    <h2>图片</h2>
+                    <div class="el-upload el-upload--text el-upload-dragger drag-div"
+                         :class="{'is-dragover':isDragOver}"
+                         @dragenter.stop.prevent="onDragIn"
+                         @dragover.stop.prevent="onDragIn"
+                         @dragleave.stop.prevent="onDragLeave"
+                         @drop.stop.prevent="onDrop"
+                         @click="chooseImg"
+                         :style="{backgroundImage: 'url('+base64Data+')'}"
+                    >
+                        <div class="fit-div" v-if="!base64Data">
+                            <i class="el-icon-upload"></i>
+                            <div class="el-upload__text" v-html="infoText"></div>
+                        </div>
                     </div>
                 </div>
+
                 <i class="fa fa-exchange icon-exchange"></i>
+
                 <div class="text-container">
-                    <textarea v-model="base64Data"></textarea>
+                    <h2>Base64</h2>
+                    <textarea class="text-div" v-model="base64Data"></textarea>
                 </div>
+
             </div>
         </div>
     </div>
@@ -121,11 +130,21 @@
             align-items: center;
             justify-content: center;
 
-            .img-container {
+            h2 {
+                font-size: 14px;
+                text-align: center;
+                line-height: 25px;
+            }
+
+            .drag-div, .text-div {
                 width: calc(100vw * 0.35);
                 height: calc(100vw * 0.175);
                 max-width: 560px;
                 max-height: 215px;
+
+            }
+
+            .drag-div {
                 background-repeat: no-repeat;
                 background-position: 50% 30%;
                 background-size: contain;
@@ -142,24 +161,14 @@
                 font-size: 32px;
             }
 
-            .text-container {
-                position: relative;
-                width: calc(100vw * 0.35);
-                height: calc(100vw * 0.175);
-                max-width: 560px;
-                max-height: 215px;
+            .text-div {
+                padding: 5px;
                 border: 1px dashed #d9d9d9;
                 border-radius: 6px;
+                resize: none;
 
                 &:hover, &:active {
                     border-color: #409EFF;
-                }
-
-                textarea {
-                    width: 100%;
-                    height: 100%;
-                    resize: none;
-                    border: none;
                 }
             }
         }
@@ -174,10 +183,11 @@
     }
 
     @media screen and (max-width: 700px) {
+
         .photo-transform .base64-container {
             display: block;
 
-            .img-container, .text-container {
+            .drag-div, .text-div {
                 display: block;
                 width: 100%;
                 height: 380px;
