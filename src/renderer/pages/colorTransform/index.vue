@@ -45,8 +45,8 @@
                         @select="handleSelect"
                 >
                     <template slot-scope="{ item }">
-                        <span class="auto-name">{{ item.value }}</span>
                         <span class="auto-color" :style="{background:item.value}"></span>
+                        <span class="auto-name">{{ item.value }}</span>
                     </template>
                     <i slot="suffix" class="fa fa-files-o" @click="copy(constModel)"></i>
                 </el-autocomplete>
@@ -146,12 +146,7 @@
             },
             copy(val) {
                 clipboard.writeText(val);
-                this.$notify({
-                    message: `<b style="position: relative;top: -4px;font-weight: bold;">已复制至剪贴板：${val}`,
-                    dangerouslyUseHTMLString: 'true',
-                    position: 'bottom-right',
-                    type: 'success'
-                });
+                this.$message({message: `已复制至剪贴板：${val}`, type: 'success'});
             }
         }
     }
@@ -204,7 +199,6 @@
         width: 20px;
         height: 20px;
         display: inline-block;
-        float: left;
         position: relative;
         top: 7px;
         margin-right: 10px;

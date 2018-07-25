@@ -81,19 +81,9 @@
                 const fileSize = (fs.statSync(imgPath).size / 1024).toFixed(2);
                 const extname = path.extname(imgPath).slice(1);
                 if (!['jpg', 'jpeg', 'png', 'gif', 'ico'].includes(extname)) {
-                    this.$notify({
-                        message: `<b style="position: relative;top: -4px;font-weight: bold;">非图片格式`,
-                        dangerouslyUseHTMLString: 'true',
-                        position: 'bottom-right',
-                        type: 'error'
-                    });
+                    this.$message({message: `非图片格式`, type: 'error'});
                 } else if (fileSize >= 2000) {
-                    this.$notify({
-                        message: `<b style="position: relative;top: -4px;font-weight: bold;">图片过大( ≥2MB )`,
-                        dangerouslyUseHTMLString: 'true',
-                        position: 'bottom-right',
-                        type: 'error'
-                    });
+                    this.$message({message: `图片过大( ≥2MB )`, type: 'error'});
                 }
                 else {
                     this.base64Data = `data:${mineType.lookup(imgPath)};base64,${fs.readFileSync(imgPath).toString('base64')}`;
