@@ -53,7 +53,7 @@
             </el-card>
             <el-card class="box-card preview-card">
                 <h1>预览、颜色拾取</h1>
-                <el-color-picker v-model="preview"></el-color-picker>
+                <el-color-picker v-model="preview" @change="onPreviewInput"></el-color-picker>
             </el-card>
         </div>
     </div>
@@ -87,14 +87,11 @@
         },
         watch: {
             constModel: function (value) {
-                this.parseColor(value);
-            },
-            preview: function (value) {
-                this.parseColor(value);
+                this.parseColor(value, 'const');
             }
         },
         methods: {
-            parseColor(value) {
+            parseColor(value, except) {
                 try {
                     if (Array.isArray(value)) {
                         value = value.map((item) => {
@@ -102,36 +99,38 @@
                         });
                     }
                     const color = Color(value);
-                    this.rModel = color.red();
-                    this.gModel = color.green();
-                    this.bModel = color.blue();
-                    this.cssModel = `rgb(${color.red()},${color.green()},${color.blue()})`;
-                    this.hexModel = color.hex();
-                    this.preview = color.hex();
+                    except != 'r' && (this.rModel = color.red());
+                    except != 'g' && (this.gModel = color.green());
+                    except != 'b' && (this.bModel = color.blue());
+                    except != 'css' && (this.cssModel = `rgb(${color.red()},${color.green()},${color.blue()})`);
+                    except != 'hex' && (this.hexModel = color.hex());
+                    except != 'preview' && (this.preview = color.hex());
                 } catch (e) {
                 }
             }
             ,
             onCssInput(value) {
-                this.parseColor(value);
+                this.parseColor(value, 'css');
             }
             ,
             onHexInput(value) {
-                this.parseColor(value);
+                this.parseColor(value, 'hex');
             }
             ,
             onRInput(value) {
-                this.parseColor([this.rModel, this.gModel, this.bModel]);
+                this.parseColor([this.rModel, this.gModel, this.bModel], 'r');
             }
             ,
             onGInput(value) {
-                this.parseColor([this.rModel, this.gModel, this.bModel]);
+                this.parseColor([this.rModel, this.gModel, this.bModel], 'g');
             }
             ,
             onBInput(value) {
-                this.parseColor([this.rModel, this.gModel, this.bModel]);
+                this.parseColor([this.rModel, this.gModel, this.bModel], 'b');
             },
-
+            onPreviewInput(value) {
+                this.parseColor(value, 'preview');
+            },
             querySearch(queryString, cb) {
                 const results = queryString ? colorJson.filter(this.createFilter(queryString)) : colorJson;
                 cb(results);
@@ -142,7 +141,7 @@
                 };
             },
             handleSelect({value}) {
-                this.parseColor(value);
+                this.parseColor(value, 'const');
             },
             copy(val) {
                 clipboard.writeText(val);
