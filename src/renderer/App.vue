@@ -40,14 +40,13 @@
     .fade-enter, .fade-leave-to {
         opacity: 0;
     }
-
-
 </style>
 <style lang="less" scoped>
 
     .router {
         position: absolute;
         width: 100%;
+        height: 100%;
     }
 
     .main-container {
