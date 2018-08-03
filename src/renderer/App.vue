@@ -22,6 +22,7 @@
 
 <style>
     @import "assets/css/reset.css";
+    @import "assets/css/main.css";
 
     #app {
         width: 100vw;
