@@ -1,9 +1,9 @@
 {
   "name": "d-tools",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "liuhuihao <1061036802@qq.com>",
-  "description": "An electron-vue project",
-  "license": null,
+  "description": "A developer tool",
+  "license": "MIT",
   "main": "./dist/electron/main.js",
   "scripts": {
     "build": "node .electron-vue/build.js && electron-builder",
@@ -41,13 +41,13 @@
       ]
     },
     "mac": {
-      "icon": "build/icons/icon.icns"
+      "icon": "static/icons/icon.icns"
     },
     "win": {
-      "icon": "build/icons/icon.ico"
+      "icon": "static/icons/icon.ico"
     },
     "linux": {
-      "icon": "build/icons"
+      "icon": "static/icons"
     }
   },
   "dependencies": {
