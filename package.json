@@ -2,7 +2,7 @@
   "name": "d-tools",
   "version": "0.0.1",
   "author": "liuhuihao <1061036802@qq.com>",
-  "description": "A developer tool",
+  "description": "d-tools is a toolbox for developers.Formatter, Base64, Regex test,Host manager and so on.",
   "license": "MIT",
   "main": "./dist/electron/main.js",
   "scripts": {

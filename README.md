@@ -1,6 +1,6 @@
 # d-tools
 
-> An electron-vue project
+> d-tools is a toolbox for developers.Formatter, Base64, Regex test,Host manager and so on.
 
 #### Build Setup
 
@@ -8,13 +8,8 @@
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:9080
-npm run dev
-
 # build electron application for production
 npm run build
-
-
 ```
 
 ---
