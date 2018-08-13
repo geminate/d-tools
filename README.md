@@ -1,8 +1,12 @@
-# d-tools
+<p align="center"><img src="http://liuhuihao.com/wp-content/uploads/2018/08/256x256.png" alt="d-tools" width="100" height="100"></p>
+
+<h1 align="center">d-tools</h1>
 
 > d-tools is a toolbox for developers.Formatter, Base64, Regex test,Host manager and so on.
+## Screenshot
+<img src="http://liuhuihao.com/wp-content/uploads/2018/08/d-tools.png" alt="d-tools">
 
-#### Build Setup
+## Build Setup
 
 ``` bash
 # install dependencies
@@ -12,6 +16,13 @@ npm install
 npm run build
 ```
 
----
+## Feature
 
-This project was generated with [electron-vue](https://github.com/SimulatedGREG/electron-vue)@[4c6ee7b](https://github.com/SimulatedGREG/electron-vue/tree/4c6ee7bf4f9b4aa647a22ec1c1ca29c2e59c3645) using [vue-cli](https://github.com/vuejs/vue-cli). Documentation about the original structure can be found [here](https://simulatedgreg.gitbooks.io/electron-vue/content/index.html).
+* Json format, Base64 md5 uri encode/decode
+* RGB HEX CSS transform, Color constant, Color picker
+* Image to base64, Base64 to image
+* Regex test
+* Host edit
+* System info
+
+---
