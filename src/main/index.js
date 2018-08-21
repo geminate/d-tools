@@ -46,7 +46,7 @@ const createWindow = () => {
 };
 
 const createTray = () => {
-    let iconPath = path.join(__static, 'icons/256x256.png');
+    let iconPath = path.join(__static, 'icons/16x16.png');
     tray = new Tray(iconPath);
     const contextMenu = Menu.buildFromTemplate([
         {label: '退出', type: 'normal', role: 'quit'}
