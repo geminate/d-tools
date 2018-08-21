@@ -14,12 +14,12 @@ const winURL = process.env.NODE_ENV === 'development' ? `http://localhost:9080` 
 const template = [{
     label: "编辑",
     submenu: [
-        {label: "撤销", accelerator: "CmdOrCtrl+Z", role: "undo"},
-        {label: "重做", accelerator: "Shift+CmdOrCtrl+Z", role: "redo"},
-        {label: "剪切", accelerator: "CmdOrCtrl+X", role: "cut"},
-        {label: "复制", accelerator: "CmdOrCtrl+C", role: "copy"},
-        {label: "粘贴", accelerator: "CmdOrCtrl+V", role: "paste"},
-        {label: "全选", accelerator: "CmdOrCtrl+A", role: "selectAll"}
+        {label: "撤销", accelerator: "CmdOrCtrl+Z", role: "undo", selector: 'undo:'},
+        {label: "重做", accelerator: "Shift+CmdOrCtrl+Z", role: "redo", selector: 'redo:'},
+        {label: "剪切", accelerator: "CmdOrCtrl+X", role: "cut", selector: 'cut:'},
+        {label: "复制", accelerator: "CmdOrCtrl+C", role: "copy", selector: 'copy:'},
+        {label: "粘贴", accelerator: "CmdOrCtrl+V", role: "paste", selector: 'paste:'},
+        {label: "全选", accelerator: "CmdOrCtrl+A", role: "selectall", selector: 'selectAll:'}
     ]
 }];
 
