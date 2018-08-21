@@ -98,7 +98,11 @@
                 this.pingResult = "";
                 this.pingStatus = true;
                 if (this.pingIp.trim() != "") {
-                    this.pingProcess = exec(`ping ${this.pingIp} -t`, {encoding: 'binary'});
+                    if (process.platform === 'darwin') {
+                        this.pingProcess = exec(`ping ${this.pingIp}`, {encoding: 'binary'});
+                    }else{
+                        this.pingProcess = exec(`ping ${this.pingIp} -t`, {encoding: 'binary'});
+                    }
                     this.pingProcess.stdout.on('data', (data) => {
                         this.pingResult += `${iconv.decode(new Buffer(data, 'binary'), 'cp936')}\n`;
                     });
