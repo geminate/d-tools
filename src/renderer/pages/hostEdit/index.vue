@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="host-edit">
+        <div ref="hostEdit" class="host-edit">
             <el-tabs v-model="activeName">
                 <el-tab-pane label="文本模式" name="text">
                     <div class="text-edit">
@@ -71,6 +71,7 @@
     import {exec} from 'child_process';
     import iconv from 'iconv-lite';
     import kill from 'tree-kill';
+    import {copyToClipboard} from '@/utils';
 
     const sys_hosts_path = process.platform === 'win32' ? `${process.env.windir || 'C:\\WINDOWS'}\\system32\\drivers\\etc\\hosts` : '/etc/hosts';
 
@@ -100,7 +101,7 @@
                 if (this.pingIp.trim() != "") {
                     if (process.platform === 'darwin') {
                         this.pingProcess = exec(`ping ${this.pingIp}`, {encoding: 'binary'});
-                    }else{
+                    } else {
                         this.pingProcess = exec(`ping ${this.pingIp} -t`, {encoding: 'binary'});
                     }
                     this.pingProcess.stdout.on('data', (data) => {
@@ -198,6 +199,12 @@
         },
         mounted() {
             this.refreshHosts();
+            this.$refs.hostEdit.querySelectorAll(".el-input__inner,textarea").forEach((item) => {
+                item.addEventListener("dblclick", (e) => {
+                    console.log(1234);
+                    copyToClipboard(e.target.value);
+                });
+            });
         }
     }
 </script>

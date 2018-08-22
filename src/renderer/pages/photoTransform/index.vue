@@ -26,7 +26,7 @@
 
                 <div class="text-container">
                     <h2>Base64</h2>
-                    <textarea class="text-div" v-model="base64Data"></textarea>
+                    <textarea class="text-div" v-model="base64Data" @dblclick="copy"></textarea>
                 </div>
 
             </div>
@@ -39,6 +39,7 @@
     import fs from 'fs';
     import path from 'path';
     import {remote, clipboard} from 'electron';
+    import {copyToClipboard} from '@/utils';
     import mineType from 'mime-types';
 
     export default {
@@ -55,6 +56,9 @@
             }
         },
         methods: {
+            copy(e) {
+                copyToClipboard(e.target.value);
+            },
             onDragIn() {
                 this.isDragOver = true;
             },

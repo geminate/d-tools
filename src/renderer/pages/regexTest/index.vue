@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="regex-test">
+        <div ref="regexText" class="regex-test">
             <el-tabs v-model="activeName">
                 <el-tab-pane label="正则测试" name="test">
                     <div class="test-pane">
@@ -51,6 +51,8 @@
 <script>
     import {mapGetters, mapMutations, mapActions} from 'vuex';
     import os from 'os';
+    import {remote, clipboard} from 'electron';
+    import {copyToClipboard} from '@/utils';
 
     export default {
         name: 'regexTest',
@@ -65,7 +67,10 @@
                 global: false,
                 frequentlyData: [
                     {label: '中文字符', value: `[\\u4e00-\\u9fa5]`},
-                    {label: 'Email地址',value: `[\\w!#$%&'*+/=?^_\`{|}~-]+(?:\\.[\\w!#$%&'*+/=?^_\`{|}~-]+)*@(?:[\\w](?:[\\w-]*[\\w])?\\.)+[\\w](?:[\\w-]*[\\w])?`},
+                    {
+                        label: 'Email地址',
+                        value: `[\\w!#$%&'*+/=?^_\`{|}~-]+(?:\\.[\\w!#$%&'*+/=?^_\`{|}~-]+)*@(?:[\\w](?:[\\w-]*[\\w])?\\.)+[\\w](?:[\\w-]*[\\w])?`
+                    },
                     {label: '网址URL', value: `[a-zA-z]+://[^\\s]*`},
                     {label: '中国电话号码', value: '\\d{3}-\\d{8}|\\d{4}-\\{7,8}'},
                     {label: 'QQ号', value: `[1-9][0-9]{4,}`},
@@ -121,6 +126,13 @@
                 this.test();
                 this.replaceResult = this.text.replace(this.reg, this.resultText);
             }
+        },
+        mounted() {
+            this.$refs.regexText.querySelectorAll(".el-input__inner,textarea").forEach((item) => {
+                item.addEventListener("dblclick", (e) => {
+                    copyToClipboard(e.target.value);
+                });
+            });
         }
     }
 </script>

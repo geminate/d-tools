@@ -63,6 +63,7 @@
     import {mapGetters, mapMutations, mapActions} from 'vuex';
     import Color from 'color';
     import {clipboard} from 'electron';
+    import {copyToClipboard} from '@/utils';
     import colorJson from '@/assets/json/color.json';
 
     export default {
@@ -81,7 +82,7 @@
         mounted() {
             this.$refs.colorTransform.querySelectorAll(".el-input__inner").forEach((item) => {
                 item.addEventListener("dblclick", (e) => {
-                    this.copy(e.target.value);
+                    copyToClipboard(e.target.value);
                 });
             });
         },
@@ -142,10 +143,6 @@
             },
             handleSelect({value}) {
                 this.parseColor(value, 'const');
-            },
-            copy(val) {
-                clipboard.writeText(val);
-                this.$message({message: `已复制至剪贴板：${val}`, type: 'success'});
             }
         }
     }

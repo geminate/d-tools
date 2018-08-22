@@ -27,7 +27,7 @@
             <el-button class="undo-btn" icon="fa fa-undo" size="mini" type="warning" @click="undo" :disabled="!canUndo">
                 撤销
             </el-button>
-            <textarea @input="saveInitText" id="text" v-model="text"></textarea>
+            <textarea @input="saveInitText" id="text" v-model="text" @dblclick="copy"></textarea>
             <pre class="message" :class="messageClass">{{message}}</pre>
         </div>
     </div>
@@ -37,7 +37,9 @@
     import {mapGetters, mapMutations, mapActions} from 'vuex';
     import jsl from '@/assets/js/jsonFormat.min.js';
     import {Base64} from 'js-base64';
+    import {clipboard} from 'electron';
     import {createHash} from 'crypto';
+    import {copyToClipboard} from '@/utils';
 
     export default {
         name: 'textTransform',
@@ -60,6 +62,9 @@
             }
         },
         methods: {
+            copy(e) {
+                copyToClipboard(e.target.value);
+            },
             undo() {
                 if (this.history.length > 0) {
                     this.text = this.history.pop();

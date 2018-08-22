@@ -5,7 +5,7 @@
                 <el-table-column prop="name" align="right" width="120"></el-table-column>
                 <el-table-column prop="value">
                     <template slot-scope="scope">
-                        <pre v-if="scope.row.text">{{ scope.row.value}}</pre>
+                        <pre @dblclick="copy" v-if="scope.row.text">{{ scope.row.value}}</pre>
                         <el-progress v-if="scope.row.progress"
                                      :text-inside="true"
                                      :stroke-width="18"
@@ -23,6 +23,7 @@
 <script>
     import {mapGetters, mapMutations, mapActions} from 'vuex';
     import os from 'os';
+    import {copyToClipboard} from '@/utils';
 
     export default {
         name: 'systemInfo',
@@ -58,6 +59,9 @@
             }
         },
         methods: {
+            copy(e) {
+                copyToClipboard(e.target.innerText);
+            },
             getAddress() {
                 const interfaces = os.networkInterfaces();
                 for (var devName in interfaces) {
