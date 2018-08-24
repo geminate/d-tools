@@ -12,7 +12,7 @@ export default new Router({
             name: 'main-page',
             component: mainPage,
             meta: {
-                title: '主页',
+                titleI18n: 'mainPage',
                 haveBack: false
             }
         }, {
@@ -20,7 +20,7 @@ export default new Router({
             name: 'photo-transform',
             component: photoTransform,
             meta: {
-                title: '图片转换',
+                titleI18n: 'photoTransform',
                 haveBack: true
             }
         }, {
@@ -28,7 +28,7 @@ export default new Router({
             name: 'color-transform',
             component: colorTransform,
             meta: {
-                title: '颜色转换',
+                titleI18n: 'colorTransform',
                 haveBack: true
             }
         }, {
@@ -36,7 +36,7 @@ export default new Router({
             name: 'regex-test',
             component: regexTest,
             meta: {
-                title: '正则测试',
+                titleI18n: 'regexTest',
                 haveBack: true
             }
         }, {
@@ -44,7 +44,7 @@ export default new Router({
             name: 'text-transform',
             component: textTransform,
             meta: {
-                title: '文本转换',
+                titleI18n: 'textTransform',
                 haveBack: true
             }
         }, {
@@ -52,7 +52,7 @@ export default new Router({
             name: 'host-edit',
             component: hostEdit,
             meta: {
-                title: 'Host编辑',
+                titleI18n: 'hostEdit',
                 haveBack: true
             }
         }, {
@@ -60,7 +60,7 @@ export default new Router({
             name: 'system-info',
             component: systemInfo,
             meta: {
-                title: '系统信息',
+                titleI18n: 'systemInfo',
                 haveBack: true
             }
         }, {

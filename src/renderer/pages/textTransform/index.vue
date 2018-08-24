@@ -2,7 +2,7 @@
     <div>
         <div class="text-transform">
             <div class="row">
-                <label class="title">加密解密：</label>
+                <label class="title">{{$t('encryptAndDecrypt')}}</label>
                 <div class="radio-container">
                     <el-radio size="mini" v-model="codeType" label="1" border>Base64</el-radio>
                     <el-radio size="mini" v-model="codeType" label="2" border>MD5</el-radio>
@@ -10,28 +10,60 @@
                     <el-radio size="mini" v-model="codeType" label="4" border>URIComponent</el-radio>
                 </div>
                 <div class="btn-container">
-                    <el-button size="mini" type="success" @click="encode">加密</el-button>
-                    <el-button size="mini" type="info" @click="decode" :disabled="!canDecode">解密</el-button>
+                    <el-button size="mini" type="success" @click="encode">{{$t('encrypt')}}</el-button>
+                    <el-button size="mini" type="info" @click="decode" :disabled="!canDecode">{{$t('decrypt')}}
+                    </el-button>
                 </div>
             </div>
             <div class="row">
-                <label class="title">格&ensp;式&ensp;化：</label>
+                <label class="title" v-html="this.$t('formatTitle')"></label>
                 <div class="radio-container">
                     <el-radio size="mini" v-model="formatType" label="1" border>JSON</el-radio>
                 </div>
                 <div class="btn-container">
-                    <el-button size="mini" type="success" @click="format">展开</el-button>
-                    <el-button size="mini" type="info" @click="zip">压缩</el-button>
+                    <el-button size="mini" type="success" @click="format">{{$t('format')}}</el-button>
+                    <el-button size="mini" type="info" @click="zip">{{$t('zip')}}</el-button>
                 </div>
             </div>
             <el-button class="undo-btn" icon="fa fa-undo" size="mini" type="warning" @click="undo" :disabled="!canUndo">
-                撤销
+                {{$t('revoke')}}
             </el-button>
             <textarea @input="saveInitText" id="text" v-model="text" @dblclick="copy"></textarea>
             <pre class="message" :class="messageClass">{{message}}</pre>
         </div>
     </div>
 </template>
+
+<i18n>
+    {
+    "en_US": {
+    "encryptAndDecrypt": "en/decrypt:",
+    "formatTitle": "format:",
+    "encrypt": "encrypt",
+    "decrypt": "decrypt",
+    "format": "format",
+    "zip": "zip",
+    "revoke": "revoke",
+    "encryptSuccess": "encrypt success",
+    "decryptSuccess": "decrypt success",
+    "formatSuccess": "format success",
+    "zipSuccess": "zip success"
+    },
+
+    "zh_CN": {
+    "encryptAndDecrypt": "加密解密：",
+    "formatTitle": "格&ensp;式&ensp;化：",
+    "encrypt": "加密",
+    "decrypt": "解密",
+    "format": "格式化",
+    "zip": "压缩",
+    "revoke": "撤销",
+    "encryptSuccess": "加密成功",
+    "decryptSuccess": "解密成功",
+    "formatSuccess": "格式化成功",
+    "zipSuccess": "压缩成功"
+    }}
+</i18n>
 
 <script>
     import {mapGetters, mapMutations, mapActions} from 'vuex';
@@ -63,7 +95,7 @@
         },
         methods: {
             copy(e) {
-                copyToClipboard(e.target.value);
+                copyToClipboard(e.target.value, this);
             },
             undo() {
                 if (this.history.length > 0) {
@@ -110,44 +142,44 @@
                 try {
                     this.text = jsl.format.formatJson(this.text);
                     jsl.parser.parse(this.text);
-                    this.setMessage("Json 格式化成功！", "success");
+                    this.setMessage(`Json ${this.$t('formatSuccess')}！`, "success");
                 } catch (pe) {
                     this.setMessage(pe.message, "error");
                 }
             },
             zipJson() {
                 this.text = jsl.zip(this.text);
-                this.setMessage("Json 压缩成功！", "success");
+                this.setMessage(`Json ${this.$t('zipSuccess')}！`, "success");
             },
             base64Encode() {
                 this.text = Base64.encode(this.text);
-                this.setMessage("Base64 加密成功！", "success");
+                this.setMessage(`Base64 ${this.$t('encryptSuccess')}！`, "success");
             },
             base64Decode() {
                 this.text = Base64.decode(this.text);
-                this.setMessage("Base64 解密成功！", "success");
+                this.setMessage(`Base64 ${this.$t('decryptSuccess')}！`, "success");
             },
             md5Encode() {
                 const md5 = createHash('md5');
                 md5.update(this.text);
                 this.text = md5.digest('hex');
-                this.setMessage("MD5 加密成功！", "success");
+                this.setMessage(`MD5 ${this.$t('encryptSuccess')}！`, "success");
             },
             uriEncode() {
                 this.text = encodeURI(this.text);
-                this.setMessage("URI 编码成功！", "success");
+                this.setMessage(`URI ${this.$t('encryptSuccess')}！`, "success");
             },
             uriDecode() {
                 this.text = decodeURI(this.text);
-                this.setMessage("URI 解码成功！", "success");
+                this.setMessage(`URI ${this.$t('decryptSuccess')}！`, "success");
             },
             uriComponentEncode() {
                 this.text = encodeURIComponent(this.text);
-                this.setMessage("URIComponent 编码成功！", "success");
+                this.setMessage(`URIComponent ${this.$t('encryptSuccess')}！`, "success");
             },
             uriComponentDecode() {
                 this.text = decodeURIComponent(this.text);
-                this.setMessage("URIComponent 解码成功！", "success");
+                this.setMessage(`URIComponent ${this.$t('decryptSuccess')}！`, "success");
             }
         }
     }

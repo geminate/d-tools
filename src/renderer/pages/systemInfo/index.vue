@@ -19,7 +19,31 @@
         </div>
     </div>
 </template>
+<i18n>
+    {
+    "en_US": {
+    "localIp": "Local ip :",
+    "hostName": "Host name :",
+    "osVersion": "OS version :",
+    "osType": "OS type :",
+    "cpuInfo": "CPU info :",
+    "memoryInfo": "Memory info :",
+    "totalMemory":"Total memory",
+    "available":"Available"
+    },
 
+    "zh_CN": {
+    "localIp": "本地 IP :",
+    "hostName": "主机名 :",
+    "osVersion": "操作系统版本 :",
+    "osType": "操作系统类型 :",
+    "cpuInfo": "CPU 信息 :",
+    "memoryInfo": "内存信息 :",
+    "totalMemory":"总内存",
+    "available":"可用"
+    }
+    }
+</i18n>
 <script>
     import {mapGetters, mapMutations, mapActions} from 'vuex';
     import os from 'os';
@@ -29,30 +53,43 @@
         name: 'systemInfo',
         data() {
             return {
-                systemInfo: [{
-                    name: '本地 IP :',
+                address: '',
+                hostName: '',
+                platform: '',
+                release: '',
+                cpuInfo: '',
+                memoryInfo: {
                     value: '',
+                    percent: 0
+                }
+            }
+        },
+        computed: {
+            systemInfo() {
+                return [{
+                    name: this.$t('localIp'),
+                    value: this.address,
                     text: true
                 }, {
-                    name: '主机名 :',
-                    value: '',
+                    name: this.$t('hostName'),
+                    value: this.hostName,
                     text: true
                 }, {
-                    name: '操作系统版本 :',
-                    value: '',
+                    name: this.$t('osVersion'),
+                    value: this.platform,
                     text: true
                 }, {
-                    name: '操作系统类型 :',
-                    value: '',
+                    name: this.$t('osType'),
+                    value: this.release,
                     text: true
                 }, {
-                    name: 'CPU 信息 :',
-                    value: '',
+                    name: this.$t('cpuInfo'),
+                    value: this.cpuInfo,
                     text: true
                 }, {
-                    name: '内存信息 :',
-                    value: '',
-                    percent: 0,
+                    name: this.$t('memoryInfo'),
+                    value: this.memoryInfo.value,
+                    percent: this.memoryInfo.percent,
                     text: true,
                     progress: true
                 }]
@@ -60,7 +97,7 @@
         },
         methods: {
             copy(e) {
-                copyToClipboard(e.target.innerText);
+                copyToClipboard(e.target.innerText, this);
             },
             getAddress() {
                 const interfaces = os.networkInterfaces();
@@ -69,7 +106,7 @@
                     for (var i = 0; i < iface.length; i++) {
                         var alias = iface[i];
                         if (alias.family === 'IPv4' && alias.address !== '127.0.0.1' && !alias.internal) {
-                            return alias.address;
+                            this.address = alias.address;
                         }
                     }
                 }
@@ -80,32 +117,32 @@
                 cpuInfo.forEach((item) => {
                     reStr += `${item.model} \n`;
                 });
-                return reStr;
+                this.cpuInfo = reStr;
             },
             getHostName() {
-                return os.hostname();
+                this.hostName = os.hostname();
             },
             getPlatform() {
-                return os.platform();
+                this.platform = os.platform();
             },
             getRelease() {
-                return os.release();
+                this.release = os.release();
             },
             getMemInfo() {
                 const obj = {
-                    value: `总内存 : ${(os.totalmem() / 1024 / 1024 / 1024).toFixed(2)} GB      可用 : ${(os.freemem() / 1024 / 1024 / 1024).toFixed(2)} GB ( ${(os.freemem() / os.totalmem() * 100).toFixed(2)}% )`,
+                    value: `${this.$t('totalMemory')} : ${(os.totalmem() / 1024 / 1024 / 1024).toFixed(2)} GB      ${this.$t('available')} : ${(os.freemem() / 1024 / 1024 / 1024).toFixed(2)} GB ( ${(os.freemem() / os.totalmem() * 100).toFixed(2)}% )`,
                     percent: Number(((os.totalmem() - os.freemem()) / os.totalmem() * 100).toFixed(2))
                 };
-                this.systemInfo[5].value = obj.value;
-                this.systemInfo[5].percent = obj.percent;
+                this.memoryInfo.value = obj.value;
+                this.memoryInfo.percent = obj.percent;
             }
         },
         mounted() {
-            this.systemInfo[0].value = this.getAddress();
-            this.systemInfo[1].value = this.getHostName();
-            this.systemInfo[2].value = this.getPlatform();
-            this.systemInfo[3].value = this.getRelease();
-            this.systemInfo[4].value = this.getCpuInfo();
+            this.getAddress();
+            this.getHostName();
+            this.getPlatform();
+            this.getRelease();
+            this.getCpuInfo();
 
             this.getMemInfo();
             setInterval(() => {

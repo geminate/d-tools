@@ -5,7 +5,7 @@
             <div class="base64-container">
 
                 <div class="img-container">
-                    <h2>图片</h2>
+                    <h2>{{$t('image')}}</h2>
                     <div class="el-upload el-upload--text el-upload-dragger drag-div"
                          :class="{'is-dragover':isDragOver}"
                          @dragenter.stop.prevent="onDragIn"
@@ -34,6 +34,29 @@
     </div>
 </template>
 
+<i18n>
+    {
+    "en_US": {
+    "image": "image",
+    "release": "Release the left mouse button and start the conversion",
+    "drop": "Drop image here, or",
+    "upload": "click to upload",
+    "choose": "choose image",
+    "notImage": "not a image",
+    "imageSize": "image is too large"
+    },
+
+    "zh_CN": {
+    "image": "图片",
+    "release": "放开鼠标左键开始转换",
+    "drop": "将图片拖到此处, 或",
+    "upload": "点击上传",
+    "choose": "请选择想要转换的图片",
+    "notImage": "非图片格式",
+    "imageSize": "图片过大"
+    }}
+</i18n>
+
 <script>
     import {mapGetters, mapMutations, mapActions} from 'vuex';
     import fs from 'fs';
@@ -52,12 +75,12 @@
         },
         computed: {
             infoText() {
-                return this.isDragOver ? '放开鼠标左键开始转换' : '将图片拖到此处，或<em>点击上传</em>';
+                return this.isDragOver ? this.$t('release') : `${this.$t('drop')} <em>${this.$t('upload')}</em>`;
             }
         },
         methods: {
             copy(e) {
-                copyToClipboard(e.target.value);
+                copyToClipboard(e.target.value, this);
             },
             onDragIn() {
                 this.isDragOver = true;
@@ -71,7 +94,7 @@
             },
             chooseImg() {
                 const imgPath = remote.dialog.showOpenDialog({
-                    title: '请选择想要转换的图片',
+                    title: this.$t('choose'),
                     filters: [
                         {name: 'Images', extensions: ['jpg', 'jpeg', 'png', 'gif', 'ico']},
                         {name: 'All Files', extensions: ['*']}],
@@ -85,9 +108,9 @@
                 const fileSize = (fs.statSync(imgPath).size / 1024).toFixed(2);
                 const extname = path.extname(imgPath).slice(1);
                 if (!['jpg', 'jpeg', 'png', 'gif', 'ico'].includes(extname)) {
-                    this.$message({message: `非图片格式`, type: 'error'});
+                    this.$message({message: `${this.$t('notImage')}`, type: 'error'});
                 } else if (fileSize >= 2000) {
-                    this.$message({message: `图片过大( ≥2MB )`, type: 'error'});
+                    this.$message({message: `${this.$t('imageSize')}( ≥2MB )`, type: 'error'});
                 }
                 else {
                     this.base64Data = `data:${mineType.lookup(imgPath)};base64,${fs.readFileSync(imgPath).toString('base64')}`;
@@ -97,6 +120,7 @@
         },
     }
 </script>
+
 <style lang="less">
     .fit-div {
         position: absolute;
@@ -111,6 +135,7 @@
         }
     }
 </style>
+
 <style lang="less" scoped>
     .photo-transform {
         padding: 0px 30px;

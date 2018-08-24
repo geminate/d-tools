@@ -2,19 +2,19 @@
     <div>
         <div ref="colorTransform" class="color-transform">
             <el-card class="box-card">
-                <h1>CSS格式</h1>
+                <h1>CSS {{$t('format')}}</h1>
                 <el-input v-model="cssModel" @input="onCssInput" placeholder="rgb(0,120,215)">
                     <i slot="suffix" class="fa fa-files-o" @click="copy(cssModel)"></i>
                 </el-input>
             </el-card>
             <el-card class="box-card">
-                <h1>Hex格式</h1>
+                <h1>Hex {{$t('format')}}</h1>
                 <el-input v-model="hexModel" @input="onHexInput" placeholder="#0078d7">
                     <i slot="suffix" class="fa fa-files-o" @click="copy(hexModel)"></i>
                 </el-input>
             </el-card>
             <el-card class="box-card">
-                <h1>RGB格式</h1>
+                <h1>RGB {{$t('format')}}</h1>
                 <div class="input-container">
                     <el-input v-model="rModel" @input="onRInput" placeholder="0 ~ 255">
                         <template slot="prepend">R</template>
@@ -35,11 +35,11 @@
                 </div>
             </el-card>
             <el-card class="box-card">
-                <h1>常量名</h1>
+                <h1>{{$t('constant')}}</h1>
                 <el-autocomplete
                         v-model="constModel"
                         :fetch-suggestions="querySearch"
-                        placeholder="例如: yellow"
+                        :placeholder="`${$t('example')}: yellow`"
                         :trigger-on-focus="true"
                         class="el-input"
                         @select="handleSelect"
@@ -52,12 +52,29 @@
                 </el-autocomplete>
             </el-card>
             <el-card class="box-card preview-card">
-                <h1>预览、颜色拾取</h1>
+                <h1>{{$t('picker')}}</h1>
                 <el-color-picker v-model="preview" @change="onPreviewInput"></el-color-picker>
             </el-card>
         </div>
     </div>
 </template>
+
+<i18n>
+    {
+    "en_US": {
+    "format": "format",
+    "constant": "Constant color",
+    "picker": "Preview and picker",
+    "example": "example"
+    },
+
+    "zh_CN": {
+    "format": "格式",
+    "constant": "常量名",
+    "picker": "预览、颜色拾取",
+    "example": "例如"
+    }}
+</i18n>
 
 <script>
     import {mapGetters, mapMutations, mapActions} from 'vuex';
@@ -82,7 +99,7 @@
         mounted() {
             this.$refs.colorTransform.querySelectorAll(".el-input__inner").forEach((item) => {
                 item.addEventListener("dblclick", (e) => {
-                    copyToClipboard(e.target.value);
+                    copyToClipboard(e.target.value, this);
                 });
             });
         },

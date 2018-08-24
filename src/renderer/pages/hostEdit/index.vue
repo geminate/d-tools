@@ -2,15 +2,15 @@
     <div>
         <div ref="hostEdit" class="host-edit">
             <el-tabs v-model="activeName">
-                <el-tab-pane label="文本模式" name="text">
+                <el-tab-pane :label="$t('textMode')" name="text">
                     <div class="text-edit">
                         <textarea v-model="hostsText"></textarea>
                         <div class="btn-container">
-                            <el-button type="success" @click="saveText">保存</el-button>
+                            <el-button type="success" @click="saveText">{{$t('save')}}</el-button>
                         </div>
                     </div>
                 </el-tab-pane>
-                <el-tab-pane label="表格模式" name="table">
+                <el-tab-pane :label="$t('tableMode')" name="table">
                     <div class="table-edit">
                         <template v-if="hostsCount<30">
                             <el-table :data="localHosts" stripe :show-header="false">
@@ -34,19 +34,20 @@
                             <el-button class="btn-add" size="mini" type="success" icon="el-icon-plus" circle
                                        @click="addRow"></el-button>
                             <div class="btn-container">
-                                <el-button type="success" @click="saveTable">保存</el-button>
+                                <el-button type="success" @click="saveTable">{{$t('save')}}</el-button>
                             </div>
                         </template>
                         <template v-else>
                             <div class="too-many-info">
-                                当前 hosts 文件条数过多( ≥30 ), 已禁用表格模式
+                                {{$t('tooLarge')}}
                             </div>
                         </template>
                     </div>
                 </el-tab-pane>
                 <el-tab-pane label="ping" name="ping">
                     <div class="ping-edit">
-                        <el-input placeholder="请输入IP或域名" size="small" class="ip-input" v-model="pingIp"></el-input>
+                        <el-input :placeholder="$t('plsInput')" size="small" class="ip-input"
+                                  v-model="pingIp"></el-input>
                         <el-button class="btn-add" size="small " type="success" @click="startPing" v-if="!pingStatus">
                             Ping
                         </el-button>
@@ -61,6 +62,29 @@
         </div>
     </div>
 </template>
+
+<i18n>
+    {
+    "en_US": {
+    "textMode": "Text mode",
+    "tableMode": "Table mode",
+    "save":"Save",
+    "tooLarge":"The number of hosts files is too large (> 30), and the table mode has been disabled",
+    "plsInput":"IP or domain name",
+    "saveSuccess":"Save success",
+    "saveFail":"Save fail, Permission denied"
+    },
+
+    "zh_CN": {
+    "textMode": "文本模式",
+    "tableMode": "表格模式",
+    "save":"保存",
+    "tooLarge":"当前 hosts 文件条数过多( ≥30 ), 已禁用表格模式",
+    "plsInput":"请输入IP或域名",
+    "saveSuccess":"保存成功",
+    "saveFail":"保存失败, 当前用户无 hosts 修改权限"
+    }}
+</i18n>
 
 <script>
     import {mapGetters, mapMutations, mapActions} from 'vuex';
@@ -109,7 +133,7 @@
                     });
                     this.pingProcess.on('close', (code) => {
                         this.pingStatus = false;
-                        this.pingResult += `已终止  code:${code}`;
+                        this.pingResult += `Exit  code:${code}`;
                     });
                 }
             },
@@ -149,9 +173,9 @@
                 fs.writeFile(sys_hosts_path, str, (err) => {
                     loading.close();
                     if (err) {
-                        this.$message({message: `保存失败,当前用户无 hosts 修改权限`, type: 'error'});
+                        this.$message({message: `${this.$t('saveFail')}`, type: 'error'});
                     } else {
-                        this.$message({message: `保存成功`, type: 'success'});
+                        this.$message({message: `${this.$t('saveSuccess')}`, type: 'success'});
                         this.refreshHosts();
                     }
                 });
@@ -201,8 +225,7 @@
             this.refreshHosts();
             this.$refs.hostEdit.querySelectorAll(".el-input__inner,textarea").forEach((item) => {
                 item.addEventListener("dblclick", (e) => {
-                    console.log(1234);
-                    copyToClipboard(e.target.value);
+                    copyToClipboard(e.target.value, this);
                 });
             });
         }
