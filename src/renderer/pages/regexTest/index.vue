@@ -302,4 +302,10 @@
             }
         }
     }
+
+    @media screen and (max-width: 700px) {
+        .regex-test .frequently-pane .item {
+            width: 100%;
+        }
+    }
 </style>
