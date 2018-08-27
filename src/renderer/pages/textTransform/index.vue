@@ -66,10 +66,8 @@
 </i18n>
 
 <script>
-    import {mapGetters, mapMutations, mapActions} from 'vuex';
     import jsl from '@/assets/js/jsonFormat.min.js';
     import {Base64} from 'js-base64';
-    import {clipboard} from 'electron';
     import {createHash} from 'crypto';
     import {copyToClipboard} from '@/utils';
 

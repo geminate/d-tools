@@ -18,25 +18,21 @@
 
 <script>
     import {mapGetters, mapMutations, mapActions} from 'vuex';
-    import electron from 'electron';
     import {setting} from '@/utils';
 
     export default {
         name: 'customHeader',
-        props: ['hasBack'],
         data() {
             return {
                 userLanguage: {}
             }
         },
         computed: {
-            ...mapGetters(['languageText']),
             title() {
                 return this.$t(this.$route.meta.titleI18n);
             }
         },
         methods: {
-            ...mapMutations(['setLanguageText']),
             onBackClick() {
                 this.$router.back();
             },

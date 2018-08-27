@@ -58,10 +58,9 @@
 </i18n>
 
 <script>
-    import {mapGetters, mapMutations, mapActions} from 'vuex';
     import fs from 'fs';
     import path from 'path';
-    import {remote, clipboard} from 'electron';
+    import {remote} from 'electron';
     import {copyToClipboard} from '@/utils';
     import mineType from 'mime-types';
 

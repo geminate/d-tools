@@ -57,7 +57,6 @@
 </i18n>
 
 <script>
-    import {mapGetters, mapMutations, mapActions} from 'vuex';
     import {contentBox} from '@/components';
 
     export default {

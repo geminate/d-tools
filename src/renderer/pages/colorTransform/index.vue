@@ -77,9 +77,7 @@
 </i18n>
 
 <script>
-    import {mapGetters, mapMutations, mapActions} from 'vuex';
     import Color from 'color';
-    import {clipboard} from 'electron';
     import {copyToClipboard} from '@/utils';
     import colorJson from '@/assets/json/color.json';
 

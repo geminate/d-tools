@@ -45,7 +45,6 @@
     }
 </i18n>
 <script>
-    import {mapGetters, mapMutations, mapActions} from 'vuex';
     import os from 'os';
     import {copyToClipboard} from '@/utils';
 

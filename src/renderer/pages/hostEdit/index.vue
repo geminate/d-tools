@@ -87,7 +87,6 @@
 </i18n>
 
 <script>
-    import {mapGetters, mapMutations, mapActions} from 'vuex';
     import fs from 'fs';
     import os from 'os';
     import readline from 'readline';

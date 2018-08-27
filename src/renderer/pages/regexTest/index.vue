@@ -116,9 +116,7 @@
 </i18n>
 
 <script>
-    import {mapGetters, mapMutations, mapActions} from 'vuex';
     import os from 'os';
-    import {remote, clipboard} from 'electron';
     import {copyToClipboard} from '@/utils';
 
     export default {
