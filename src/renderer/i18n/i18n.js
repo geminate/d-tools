@@ -7,7 +7,7 @@ import zhLocale from 'element-ui/lib/locale/lang/zh-CN';
 Vue.use(VueI18n);
 
 const i18n = new VueI18n({
-    locale: 'zh_CN',
+    locale: 'en_US',
     messages: {
         en_US: {
             "mainPage": "Home",

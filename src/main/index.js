@@ -12,14 +12,14 @@ if (process.env.NODE_ENV !== 'development') {
 const winURL = process.env.NODE_ENV === 'development' ? `http://localhost:9080` : `file://${__dirname}/index.html`;
 
 const template = [{
-    label: "编辑",
+    label: "Edit",
     submenu: [
-        {label: "撤销", accelerator: "CmdOrCtrl+Z", role: "undo", selector: 'undo:'},
-        {label: "重做", accelerator: "Shift+CmdOrCtrl+Z", role: "redo", selector: 'redo:'},
-        {label: "剪切", accelerator: "CmdOrCtrl+X", role: "cut", selector: 'cut:'},
-        {label: "复制", accelerator: "CmdOrCtrl+C", role: "copy", selector: 'copy:'},
-        {label: "粘贴", accelerator: "CmdOrCtrl+V", role: "paste", selector: 'paste:'},
-        {label: "全选", accelerator: "CmdOrCtrl+A", role: "selectall", selector: 'selectAll:'}
+        {label: "Undo", accelerator: "CmdOrCtrl+Z", role: "undo", selector: 'undo:'},
+        {label: "Redo", accelerator: "Shift+CmdOrCtrl+Z", role: "redo", selector: 'redo:'},
+        {label: "Cut", accelerator: "CmdOrCtrl+X", role: "cut", selector: 'cut:'},
+        {label: "Copy", accelerator: "CmdOrCtrl+C", role: "copy", selector: 'copy:'},
+        {label: "Paste", accelerator: "CmdOrCtrl+V", role: "paste", selector: 'paste:'},
+        {label: "Select all", accelerator: "CmdOrCtrl+A", role: "selectall", selector: 'selectAll:'}
     ]
 }];
 
@@ -49,7 +49,7 @@ const createTray = () => {
     let iconPath = path.join(__static, 'icons/16x16.png');
     tray = new Tray(iconPath);
     const contextMenu = Menu.buildFromTemplate([
-        {label: '退出', type: 'normal', role: 'quit'}
+        {label: 'Exit', type: 'normal', role: 'quit'}
     ]);
     tray.setContextMenu(contextMenu);
     tray.setToolTip("d-tools");

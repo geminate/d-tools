@@ -38,7 +38,7 @@
             },
             initUserSetting() {
                 let userLanguage = setting.get("language");
-                (!userLanguage || !userLanguage.name) && (userLanguage = {name: '简体中文', sign: 'zh_CN'});
+                (!userLanguage || !userLanguage.name) && (userLanguage = {name: 'English', sign: 'en_US'});
                 this.setLanguage(userLanguage);
             },
             changeDropdown(language) {
