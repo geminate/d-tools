@@ -144,9 +144,12 @@
             this.getCpuInfo();
 
             this.getMemInfo();
-            setInterval(() => {
+            const timer = setInterval(() => {
                 this.getMemInfo();
             }, 500);
+            this.$once('hook:beforeDestroy', () => {
+                clearInterval(timer);
+            });
         }
     }
 </script>
