@@ -1,6 +1,6 @@
 {
   "name": "d-tools",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "author": "liuhuihao <1061036802@qq.com>",
   "description": "d-tools is a toolbox for developers.Formatter, Base64, Regex test,Host manager and so on.",
   "license": "MIT",
