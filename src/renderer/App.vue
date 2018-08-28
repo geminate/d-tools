@@ -1,5 +1,10 @@
 <template>
-    <div class="main-container">
+    <div class="main-container"
+         @dragenter.stop.prevent="onDragIn"
+         @drop.stop.prevent="onDrop"
+         @dragover.stop.prevent="onDragIn"
+         @dragleave.stop.prevent="onDragLeave"
+    >
         <custom-header title="Home"></custom-header>
         <div class="content-container">
             <transition name="fade">
@@ -17,6 +22,14 @@
         components: {
             customHeader
         },
+        methods: {
+            onDragIn() {
+            },
+            onDrop(e) {
+            },
+            onDragLeave() {
+            }
+        }
     }
 </script>
 
