@@ -4,11 +4,15 @@
 
 > d-tools is a toolbox for developers.Formatter, Base64, Regex test,Host manager and so on.
 ## Screenshot
+Two language support:
+
 EN:
-<img src="https://github.com/geminate/d-tools/blob/master/blob/master/img/en.png" alt="d-tools">
+
+<img src="https://github.com/geminate/d-tools/blob/master/blob/master/img/en.png" alt="d-tools" style="width:500px;">
 
 CN:
-<img src="https://github.com/geminate/d-tools/blob/master/blob/master/img/cn.png" alt="d-tools">
+
+<img src="https://github.com/geminate/d-tools/blob/master/blob/master/img/cn.png" alt="d-tools" style="width:500px;">
 
 ## Build Setup
 
