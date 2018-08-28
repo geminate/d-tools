@@ -7,13 +7,13 @@
 Two language support:
 
 EN:
-
-<img src="https://github.com/geminate/d-tools/blob/master/blob/master/img/en.png" alt="d-tools" style="width:500px;">
-
+<p align="center">
+<img src="https://github.com/geminate/d-tools/blob/master/blob/master/img/en-2.png" alt="d-tools" width="500" height="500">
+</p>
 CN:
-
-<img src="https://github.com/geminate/d-tools/blob/master/blob/master/img/cn.png" alt="d-tools" style="width:500px;">
-
+<p align="center">
+<img src="https://github.com/geminate/d-tools/blob/master/blob/master/img/cn-2.png" alt="d-tools" width="500" height="500">
+</p>
 ## Build Setup
 
 ``` bash
