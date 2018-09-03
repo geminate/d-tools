@@ -1,5 +1,5 @@
 <template>
-    <div class="content-box" @click="onClick">
+    <div class="content-box" @click="onItemClick">
         <div class="icon-container">
             <slot></slot>
         </div>
@@ -7,6 +7,7 @@
             <h2>{{title}}</h2>
             <p>{{detail}}</p>
         </div>
+        <div class="fa fa-close" v-if="type == 'custom'" @click.stop.prevent="onDelClick"></div>
     </div>
 </template>
 
@@ -15,10 +16,17 @@
 
     export default {
         name: 'contentBox',
-        props: ['title', 'detail', 'href'],
+        props: ['title', 'detail', 'href', 'type'],
         methods: {
-            onClick() {
-                this.$router.push({path: this.href});
+            onItemClick() {
+                if (this.href) {
+                    this.$router.push({path: this.href});
+                } else {
+                    this.$emit('itemClick')
+                }
+            },
+            onDelClick() {
+                this.$emit('delClick')
             }
         }
     }
@@ -33,9 +41,22 @@
         border: 2px solid transparent;
         display: inline-block;
         cursor: pointer;
+        position: relative;
 
         &:hover {
             border: 2px solid rgb(225, 225, 225);
+
+            .fa-close {
+                display: block;
+            }
+        }
+
+        .fa-close {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            color: rgb(0, 120, 215);
+            display: none;
         }
 
         .icon-container {
@@ -57,9 +78,15 @@
             }
 
             p {
+                overflow: hidden;
                 font-size: 12px;
                 color: rgb(50, 50, 50);
-                line-height: 14px;
+                line-height: 1.32;
+                word-break: break-all;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
             }
         }
     }
