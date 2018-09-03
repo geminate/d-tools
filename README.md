@@ -8,11 +8,11 @@ Two language support:
 
 EN:
 <p align="center">
-<img src="https://github.com/geminate/d-tools/blob/master/blob/master/img/en-2.png" alt="d-tools" width="500">
+<img src="https://github.com/geminate/d-tools/blob/master/blob/master/img/EN_0.1.1.png" alt="d-tools" width="500">
 </p>
 CN:
 <p align="center">
-<img src="https://github.com/geminate/d-tools/blob/master/blob/master/img/cn-2.png" alt="d-tools" width="500">
+<img src="https://github.com/geminate/d-tools/blob/master/blob/master/img/CN_0.1.1.png" alt="d-tools" width="500">
 </p>
 
 ## Build Setup
