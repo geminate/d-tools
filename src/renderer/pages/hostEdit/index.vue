@@ -122,7 +122,7 @@
                 this.pingResult = "";
                 this.pingStatus = true;
                 if (this.pingIp.trim() != "") {
-                    if (process.platform === 'darwin') {
+                    if (process.platform === 'darwin' || process.platform === 'linux') {
                         this.pingProcess = exec(`ping ${this.pingIp}`, {encoding: 'binary'});
                     } else {
                         this.pingProcess = exec(`ping ${this.pingIp} -t`, {encoding: 'binary'});
