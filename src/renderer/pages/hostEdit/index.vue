@@ -92,7 +92,6 @@
     import readline from 'readline';
     import {Loading} from 'element-ui';
     import {exec} from 'child_process';
-    import iconv from 'iconv-lite';
     import kill from 'tree-kill';
     import {copyToClipboard} from '@/utils';
 
@@ -123,12 +122,12 @@
                 this.pingStatus = true;
                 if (this.pingIp.trim() != "") {
                     if (process.platform === 'darwin' || process.platform === 'linux') {
-                        this.pingProcess = exec(`ping ${this.pingIp}`, {encoding: 'binary'});
+                        this.pingProcess = exec(`ping ${this.pingIp}`, {encoding: 'UTF-8'});
                     } else {
-                        this.pingProcess = exec(`ping ${this.pingIp} -t`, {encoding: 'binary'});
+                        this.pingProcess = exec(`@chcp 65001 >nul & ping ${this.pingIp} -t`, {encoding: 'UTF-8'});
                     }
                     this.pingProcess.stdout.on('data', (data) => {
-                        this.pingResult += `${iconv.decode(new Buffer(data, 'binary'), 'cp936')}\n`;
+                        this.pingResult += data;
                     });
                     this.pingProcess.on('close', (code) => {
                         this.pingStatus = false;
