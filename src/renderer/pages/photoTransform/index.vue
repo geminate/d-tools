@@ -99,7 +99,7 @@
                         {name: 'All Files', extensions: ['*']}],
                     properties: ['openFile']
                 });
-                if (imgPath != null && imgPath != 'undefined' && imgPath.length > 0) {
+                if (!imgPath && imgPath != 'undefined' && imgPath.length > 0) {
                     this.coverImgToBase64(imgPath[0]);
                 }
             },
