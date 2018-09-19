@@ -107,6 +107,9 @@
             }
         },
         methods: {
+            copy(hexModel) {
+                copyToClipboard(hexModel);
+            },
             parseColor(value, except) {
                 try {
                     if (Array.isArray(value)) {
