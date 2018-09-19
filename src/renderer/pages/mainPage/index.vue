@@ -30,6 +30,10 @@
                 <i class="fa fa-info"></i>
             </content-box>
 
+            <content-box :title="$t('qrcodeTitle')" :detail="$t('qrcodeInfo')" href="/qrcode">
+                <i class="fa fa-qrcode"></i>
+            </content-box>
+
             <transition-group name="fade">
                 <content-box type="custom"
                              v-for="(item,i) in shortcutList"
@@ -67,6 +71,8 @@
     "hostEditInfo": "Edit host, Ping",
     "systemInfoTitle": "System info",
     "systemInfoInfo": "IP addres, memory info",
+    "qrcodeTitle": "Generate qr code",
+    "qrcodeInfo": "Generate Text/URL to qr code",
     "choose": "choose file"
     },
 
@@ -83,6 +89,8 @@
     "hostEditInfo": "编辑修改系统Host、Ping",
     "systemInfoTitle": "系统信息",
     "systemInfoInfo": "IP地址、内存使用情况等",
+    "qrcodeTitle": "生成二维码",
+    "qrcodeInfo": "文本、网址生成二维码",
     "choose": "请选择想要添加的文件"
     }}
 </i18n>

@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 
-import {mainPage, colorTransform, photoTransform, regexTest, textTransform, hostEdit, systemInfo} from '@/pages';
+import {mainPage, colorTransform, photoTransform, regexTest, textTransform, hostEdit, systemInfo, qrcode} from '@/pages';
 
 Vue.use(Router);
 
@@ -61,6 +61,14 @@ export default new Router({
             component: systemInfo,
             meta: {
                 titleI18n: 'systemInfo',
+                haveBack: true
+            }
+        }, {
+            path: '/qrcode',
+            name: 'qrcode',
+            component: qrcode,
+            meta: {
+                titleI18n: 'qrcode',
                 haveBack: true
             }
         }, {

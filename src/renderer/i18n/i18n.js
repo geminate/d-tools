@@ -18,6 +18,7 @@ const i18n = new VueI18n({
             "hostEdit": "Host edit",
             "systemInfo": "System info",
             "alreadyCopy": "Copied to clipboard: ",
+            "qrcode": "Generate QrCode",
             ...enLocale
         },
         zh_CN: {
@@ -28,6 +29,7 @@ const i18n = new VueI18n({
             "textTransform": "文本转换",
             "hostEdit": "Host编辑",
             "systemInfo": "系统信息",
+            "qrcode": "生成二维码",
             "alreadyCopy": "已复制至剪贴板：",
             ...zhLocale
         }

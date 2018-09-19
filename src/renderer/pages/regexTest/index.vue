@@ -37,7 +37,7 @@
                 </el-tab-pane>
                 <el-tab-pane :label="$t('frequently')" name="frequently">
                     <div class="frequently-pane">
-                        <div class="item" v-for="(item,i) in frequentlyData">
+                        <div class="item" v-for="(item,i) in frequentlyData" :key="i">
                             <label class="label">{{item.label}}：</label>
                             <el-input readonly size="small" suffix-icon="el-icon-date" :value="item.value"></el-input>
                         </div>
