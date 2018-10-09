@@ -6,5 +6,16 @@ import textTransform from './textTransform';
 import hostEdit from './hostEdit';
 import systemInfo from './systemInfo';
 import qrcode from './qrcode';
+import contrastTable from './contrastTable';
 
-export {mainPage, colorTransform, photoTransform, regexTest, textTransform, hostEdit, systemInfo, qrcode};
+export {
+    mainPage,
+    colorTransform,
+    photoTransform,
+    regexTest,
+    textTransform,
+    hostEdit,
+    systemInfo,
+    qrcode,
+    contrastTable
+};

@@ -1,7 +1,17 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 
-import {mainPage, colorTransform, photoTransform, regexTest, textTransform, hostEdit, systemInfo, qrcode} from '@/pages';
+import {
+    mainPage,
+    colorTransform,
+    photoTransform,
+    regexTest,
+    textTransform,
+    hostEdit,
+    systemInfo,
+    qrcode,
+    contrastTable
+} from '@/pages';
 
 Vue.use(Router);
 
@@ -69,6 +79,14 @@ export default new Router({
             component: qrcode,
             meta: {
                 titleI18n: 'qrcode',
+                haveBack: true
+            }
+        }, {
+            path: '/contrastTable',
+            name: 'contrastTable',
+            component: contrastTable,
+            meta: {
+                titleI18n: 'contrastTable',
                 haveBack: true
             }
         }, {

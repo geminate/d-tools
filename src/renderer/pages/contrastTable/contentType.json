@@ -1,0 +1,1378 @@
+﻿[
+  {
+    "ext": ".*（ 二进制流，不知道下载文件类型）",
+    "type": "application/octet-stream"
+  },
+  {
+    "ext": ".tif",
+    "type": "image/tiff"
+  },
+  {
+    "ext": ".001",
+    "type": "application/x-001"
+  },
+  {
+    "ext": ".301",
+    "type": "application/x-301"
+  },
+  {
+    "ext": ".323",
+    "type": "text/h323"
+  },
+  {
+    "ext": ".906",
+    "type": "application/x-906"
+  },
+  {
+    "ext": ".907",
+    "type": "drawing/907"
+  },
+  {
+    "ext": ".a11",
+    "type": "application/x-a11"
+  },
+  {
+    "ext": ".acp",
+    "type": "audio/x-mei-aac"
+  },
+  {
+    "ext": ".ai",
+    "type": "application/postscript"
+  },
+  {
+    "ext": ".aif",
+    "type": "audio/aiff"
+  },
+  {
+    "ext": ".aifc",
+    "type": "audio/aiff"
+  },
+  {
+    "ext": ".aiff",
+    "type": "audio/aiff"
+  },
+  {
+    "ext": ".anv",
+    "type": "application/x-anv"
+  },
+  {
+    "ext": ".asa",
+    "type": "text/asa"
+  },
+  {
+    "ext": ".asf",
+    "type": "video/x-ms-asf"
+  },
+  {
+    "ext": ".asp",
+    "type": "text/asp"
+  },
+  {
+    "ext": ".asx",
+    "type": "video/x-ms-asf"
+  },
+  {
+    "ext": ".au",
+    "type": "audio/basic"
+  },
+  {
+    "ext": ".avi",
+    "type": "video/avi"
+  },
+  {
+    "ext": ".awf",
+    "type": "application/vnd.adobe.workflow"
+  },
+  {
+    "ext": ".biz",
+    "type": "text/xml"
+  },
+  {
+    "ext": ".bmp",
+    "type": "application/x-bmp"
+  },
+  {
+    "ext": ".bot",
+    "type": "application/x-bot"
+  },
+  {
+    "ext": ".c4t",
+    "type": "application/x-c4t"
+  },
+  {
+    "ext": ".c90",
+    "type": "application/x-c90"
+  },
+  {
+    "ext": ".cal",
+    "type": "application/x-cals"
+  },
+  {
+    "ext": ".cat",
+    "type": "application/vnd.ms-pki.seccat"
+  },
+  {
+    "ext": ".cdf",
+    "type": "application/x-netcdf"
+  },
+  {
+    "ext": ".cdr",
+    "type": "application/x-cdr"
+  },
+  {
+    "ext": ".cel",
+    "type": "application/x-cel"
+  },
+  {
+    "ext": ".cer",
+    "type": "application/x-x509-ca-cert"
+  },
+  {
+    "ext": ".cg4",
+    "type": "application/x-g4"
+  },
+  {
+    "ext": ".cgm",
+    "type": "application/x-cgm"
+  },
+  {
+    "ext": ".cit",
+    "type": "application/x-cit"
+  },
+  {
+    "ext": ".class",
+    "type": "java/*"
+  },
+  {
+    "ext": ".cml",
+    "type": "text/xml"
+  },
+  {
+    "ext": ".cmp",
+    "type": "application/x-cmp"
+  },
+  {
+    "ext": ".cmx",
+    "type": "application/x-cmx"
+  },
+  {
+    "ext": ".cot",
+    "type": "application/x-cot"
+  },
+  {
+    "ext": ".crl",
+    "type": "application/pkix-crl"
+  },
+  {
+    "ext": ".crt",
+    "type": "application/x-x509-ca-cert"
+  },
+  {
+    "ext": ".csi",
+    "type": "application/x-csi"
+  },
+  {
+    "ext": ".css",
+    "type": "text/css"
+  },
+  {
+    "ext": ".cut",
+    "type": "application/x-cut"
+  },
+  {
+    "ext": ".dbf",
+    "type": "application/x-dbf"
+  },
+  {
+    "ext": ".dbm",
+    "type": "application/x-dbm"
+  },
+  {
+    "ext": ".dbx",
+    "type": "application/x-dbx"
+  },
+  {
+    "ext": ".dcd",
+    "type": "text/xml"
+  },
+  {
+    "ext": ".dcx",
+    "type": "application/x-dcx"
+  },
+  {
+    "ext": ".der",
+    "type": "application/x-x509-ca-cert"
+  },
+  {
+    "ext": ".dgn",
+    "type": "application/x-dgn"
+  },
+  {
+    "ext": ".dib",
+    "type": "application/x-dib"
+  },
+  {
+    "ext": ".dll",
+    "type": "application/x-msdownload"
+  },
+  {
+    "ext": ".doc",
+    "type": "application/msword"
+  },
+  {
+    "ext": ".dot",
+    "type": "application/msword"
+  },
+  {
+    "ext": ".drw",
+    "type": "application/x-drw"
+  },
+  {
+    "ext": ".dtd",
+    "type": "text/xml"
+  },
+  {
+    "ext": ".dwf",
+    "type": "Model/vnd.dwf"
+  },
+  {
+    "ext": ".dwf",
+    "type": "application/x-dwf"
+  },
+  {
+    "ext": ".dwg",
+    "type": "application/x-dwg"
+  },
+  {
+    "ext": ".dxb",
+    "type": "application/x-dxb"
+  },
+  {
+    "ext": ".dxf",
+    "type": "application/x-dxf"
+  },
+  {
+    "ext": ".edn",
+    "type": "application/vnd.adobe.edn"
+  },
+  {
+    "ext": ".emf",
+    "type": "application/x-emf"
+  },
+  {
+    "ext": ".eml",
+    "type": "message/rfc822"
+  },
+  {
+    "ext": ".ent",
+    "type": "text/xml"
+  },
+  {
+    "ext": ".epi",
+    "type": "application/x-epi"
+  },
+  {
+    "ext": ".eps",
+    "type": "application/x-ps"
+  },
+  {
+    "ext": ".eps",
+    "type": "application/postscript"
+  },
+  {
+    "ext": ".etd",
+    "type": "application/x-ebx"
+  },
+  {
+    "ext": ".exe",
+    "type": "application/x-msdownload"
+  },
+  {
+    "ext": ".fax",
+    "type": "image/fax"
+  },
+  {
+    "ext": ".fdf",
+    "type": "application/vnd.fdf"
+  },
+  {
+    "ext": ".fif",
+    "type": "application/fractals"
+  },
+  {
+    "ext": ".fo",
+    "type": "text/xml"
+  },
+  {
+    "ext": ".frm",
+    "type": "application/x-frm"
+  },
+  {
+    "ext": ".g4",
+    "type": "application/x-g4"
+  },
+  {
+    "ext": ".gbr",
+    "type": "application/x-gbr"
+  },
+  {
+    "ext": ".",
+    "type": "application/x-"
+  },
+  {
+    "ext": ".gif",
+    "type": "image/gif"
+  },
+  {
+    "ext": ".gl2",
+    "type": "application/x-gl2"
+  },
+  {
+    "ext": ".gp4",
+    "type": "application/x-gp4"
+  },
+  {
+    "ext": ".hgl",
+    "type": "application/x-hgl"
+  },
+  {
+    "ext": ".hmr",
+    "type": "application/x-hmr"
+  },
+  {
+    "ext": ".hpg",
+    "type": "application/x-hpgl"
+  },
+  {
+    "ext": ".hpl",
+    "type": "application/x-hpl"
+  },
+  {
+    "ext": ".hqx",
+    "type": "application/mac-binhex40"
+  },
+  {
+    "ext": ".hrf",
+    "type": "application/x-hrf"
+  },
+  {
+    "ext": ".hta",
+    "type": "application/hta"
+  },
+  {
+    "ext": ".htc",
+    "type": "text/x-component"
+  },
+  {
+    "ext": ".htm",
+    "type": "text/html"
+  },
+  {
+    "ext": ".html",
+    "type": "text/html"
+  },
+  {
+    "ext": ".htt",
+    "type": "text/webviewhtml"
+  },
+  {
+    "ext": ".htx",
+    "type": "text/html"
+  },
+  {
+    "ext": ".icb",
+    "type": "application/x-icb"
+  },
+  {
+    "ext": ".ico",
+    "type": "image/x-icon"
+  },
+  {
+    "ext": ".ico",
+    "type": "application/x-ico"
+  },
+  {
+    "ext": ".iff",
+    "type": "application/x-iff"
+  },
+  {
+    "ext": ".ig4",
+    "type": "application/x-g4"
+  },
+  {
+    "ext": ".igs",
+    "type": "application/x-igs"
+  },
+  {
+    "ext": ".iii",
+    "type": "application/x-iphone"
+  },
+  {
+    "ext": ".img",
+    "type": "application/x-img"
+  },
+  {
+    "ext": ".ins",
+    "type": "application/x-internet-signup"
+  },
+  {
+    "ext": ".isp",
+    "type": "application/x-internet-signup"
+  },
+  {
+    "ext": ".IVF",
+    "type": "video/x-ivf"
+  },
+  {
+    "ext": ".java",
+    "type": "java/*"
+  },
+  {
+    "ext": ".jfif",
+    "type": "image/jpeg"
+  },
+  {
+    "ext": ".jpe",
+    "type": "image/jpeg"
+  },
+  {
+    "ext": ".jpe",
+    "type": "application/x-jpe"
+  },
+  {
+    "ext": ".jpeg",
+    "type": "image/jpeg"
+  },
+  {
+    "ext": ".jpg",
+    "type": "image/jpeg"
+  },
+  {
+    "ext": ".jpg",
+    "type": "application/x-jpg"
+  },
+  {
+    "ext": ".js",
+    "type": "application/x-javascript"
+  },
+  {
+    "ext": ".jsp",
+    "type": "text/html"
+  },
+  {
+    "ext": ".la1",
+    "type": "audio/x-liquid-file"
+  },
+  {
+    "ext": ".lar",
+    "type": "application/x-laplayer-reg"
+  },
+  {
+    "ext": ".latex",
+    "type": "application/x-latex"
+  },
+  {
+    "ext": ".lavs",
+    "type": "audio/x-liquid-secure"
+  },
+  {
+    "ext": ".lbm",
+    "type": "application/x-lbm"
+  },
+  {
+    "ext": ".lmsff",
+    "type": "audio/x-la-lms"
+  },
+  {
+    "ext": ".ls",
+    "type": "application/x-javascript"
+  },
+  {
+    "ext": ".ltr",
+    "type": "application/x-ltr"
+  },
+  {
+    "ext": ".m1v",
+    "type": "video/x-mpeg"
+  },
+  {
+    "ext": ".m2v",
+    "type": "video/x-mpeg"
+  },
+  {
+    "ext": ".m3u",
+    "type": "audio/mpegurl"
+  },
+  {
+    "ext": ".m4e",
+    "type": "video/mpeg4"
+  },
+  {
+    "ext": ".mac",
+    "type": "application/x-mac"
+  },
+  {
+    "ext": ".man",
+    "type": "application/x-troff-man"
+  },
+  {
+    "ext": ".math",
+    "type": "text/xml"
+  },
+  {
+    "ext": ".mdb",
+    "type": "application/msaccess"
+  },
+  {
+    "ext": ".mdb",
+    "type": "application/x-mdb"
+  },
+  {
+    "ext": ".mfp",
+    "type": "application/x-shockwave-flash"
+  },
+  {
+    "ext": ".mht",
+    "type": "message/rfc822"
+  },
+  {
+    "ext": ".mhtml",
+    "type": "message/rfc822"
+  },
+  {
+    "ext": ".mi",
+    "type": "application/x-mi"
+  },
+  {
+    "ext": ".mid",
+    "type": "audio/mid"
+  },
+  {
+    "ext": ".midi",
+    "type": "audio/mid"
+  },
+  {
+    "ext": ".mil",
+    "type": "application/x-mil"
+  },
+  {
+    "ext": ".mml",
+    "type": "text/xml"
+  },
+  {
+    "ext": ".mnd",
+    "type": "audio/x-musicnet-download"
+  },
+  {
+    "ext": ".mns",
+    "type": "audio/x-musicnet-stream"
+  },
+  {
+    "ext": ".mocha",
+    "type": "application/x-javascript"
+  },
+  {
+    "ext": ".movie",
+    "type": "video/x-sgi-movie"
+  },
+  {
+    "ext": ".mp1",
+    "type": "audio/mp1"
+  },
+  {
+    "ext": ".mp2",
+    "type": "audio/mp2"
+  },
+  {
+    "ext": ".mp2v",
+    "type": "video/mpeg"
+  },
+  {
+    "ext": ".mp3",
+    "type": "audio/mp3"
+  },
+  {
+    "ext": ".mp4",
+    "type": "video/mpeg4"
+  },
+  {
+    "ext": ".mpa",
+    "type": "video/x-mpg"
+  },
+  {
+    "ext": ".mpd",
+    "type": "application/vnd.ms-project"
+  },
+  {
+    "ext": ".mpe",
+    "type": "video/x-mpeg"
+  },
+  {
+    "ext": ".mpeg",
+    "type": "video/mpg"
+  },
+  {
+    "ext": ".mpg",
+    "type": "video/mpg"
+  },
+  {
+    "ext": ".mpga",
+    "type": "audio/rn-mpeg"
+  },
+  {
+    "ext": ".mpp",
+    "type": "application/vnd.ms-project"
+  },
+  {
+    "ext": ".mps",
+    "type": "video/x-mpeg"
+  },
+  {
+    "ext": ".mpt",
+    "type": "application/vnd.ms-project"
+  },
+  {
+    "ext": ".mpv",
+    "type": "video/mpg"
+  },
+  {
+    "ext": ".mpv2",
+    "type": "video/mpeg"
+  },
+  {
+    "ext": ".mpw",
+    "type": "application/vnd.ms-project"
+  },
+  {
+    "ext": ".mpx",
+    "type": "application/vnd.ms-project"
+  },
+  {
+    "ext": ".mtx",
+    "type": "text/xml"
+  },
+  {
+    "ext": ".mxp",
+    "type": "application/x-mmxp"
+  },
+  {
+    "ext": ".net",
+    "type": "image/pnetvue"
+  },
+  {
+    "ext": ".nrf",
+    "type": "application/x-nrf"
+  },
+  {
+    "ext": ".nws",
+    "type": "message/rfc822"
+  },
+  {
+    "ext": ".odc",
+    "type": "text/x-ms-odc"
+  },
+  {
+    "ext": ".out",
+    "type": "application/x-out"
+  },
+  {
+    "ext": ".p10",
+    "type": "application/pkcs10"
+  },
+  {
+    "ext": ".p12",
+    "type": "application/x-pkcs12"
+  },
+  {
+    "ext": ".p7b",
+    "type": "application/x-pkcs7-certificates"
+  },
+  {
+    "ext": ".p7c",
+    "type": "application/pkcs7-mime"
+  },
+  {
+    "ext": ".p7m",
+    "type": "application/pkcs7-mime"
+  },
+  {
+    "ext": ".p7r",
+    "type": "application/x-pkcs7-certreqresp"
+  },
+  {
+    "ext": ".p7s",
+    "type": "application/pkcs7-signature"
+  },
+  {
+    "ext": ".pc5",
+    "type": "application/x-pc5"
+  },
+  {
+    "ext": ".pci",
+    "type": "application/x-pci"
+  },
+  {
+    "ext": ".pcl",
+    "type": "application/x-pcl"
+  },
+  {
+    "ext": ".pcx",
+    "type": "application/x-pcx"
+  },
+  {
+    "ext": ".pdf",
+    "type": "application/pdf"
+  },
+  {
+    "ext": ".pdf",
+    "type": "application/pdf"
+  },
+  {
+    "ext": ".pdx",
+    "type": "application/vnd.adobe.pdx"
+  },
+  {
+    "ext": ".pfx",
+    "type": "application/x-pkcs12"
+  },
+  {
+    "ext": ".pgl",
+    "type": "application/x-pgl"
+  },
+  {
+    "ext": ".pic",
+    "type": "application/x-pic"
+  },
+  {
+    "ext": ".pko",
+    "type": "application/vnd.ms-pki.pko"
+  },
+  {
+    "ext": ".pl",
+    "type": "application/x-perl"
+  },
+  {
+    "ext": ".plg",
+    "type": "text/html"
+  },
+  {
+    "ext": ".pls",
+    "type": "audio/scpls"
+  },
+  {
+    "ext": ".plt",
+    "type": "application/x-plt"
+  },
+  {
+    "ext": ".png",
+    "type": "image/png"
+  },
+  {
+    "ext": ".png",
+    "type": "application/x-png"
+  },
+  {
+    "ext": ".pot",
+    "type": "application/vnd.ms-powerpoint"
+  },
+  {
+    "ext": ".ppa",
+    "type": "application/vnd.ms-powerpoint"
+  },
+  {
+    "ext": ".ppm",
+    "type": "application/x-ppm"
+  },
+  {
+    "ext": ".pps",
+    "type": "application/vnd.ms-powerpoint"
+  },
+  {
+    "ext": ".ppt",
+    "type": "application/vnd.ms-powerpoint"
+  },
+  {
+    "ext": ".ppt",
+    "type": "application/x-ppt"
+  },
+  {
+    "ext": ".pr",
+    "type": "application/x-pr"
+  },
+  {
+    "ext": ".prf",
+    "type": "application/pics-rules"
+  },
+  {
+    "ext": ".prn",
+    "type": "application/x-prn"
+  },
+  {
+    "ext": ".prt",
+    "type": "application/x-prt"
+  },
+  {
+    "ext": ".ps",
+    "type": "application/x-ps"
+  },
+  {
+    "ext": ".ps",
+    "type": "application/postscript"
+  },
+  {
+    "ext": ".ptn",
+    "type": "application/x-ptn"
+  },
+  {
+    "ext": ".pwz",
+    "type": "application/vnd.ms-powerpoint"
+  },
+  {
+    "ext": ".r3t",
+    "type": "text/vnd.rn-realtext3d"
+  },
+  {
+    "ext": ".ra",
+    "type": "audio/vnd.rn-realaudio"
+  },
+  {
+    "ext": ".ram",
+    "type": "audio/x-pn-realaudio"
+  },
+  {
+    "ext": ".ras",
+    "type": "application/x-ras"
+  },
+  {
+    "ext": ".rat",
+    "type": "application/rat-file"
+  },
+  {
+    "ext": ".rdf",
+    "type": "text/xml"
+  },
+  {
+    "ext": ".rec",
+    "type": "application/vnd.rn-recording"
+  },
+  {
+    "ext": ".red",
+    "type": "application/x-red"
+  },
+  {
+    "ext": ".rgb",
+    "type": "application/x-rgb"
+  },
+  {
+    "ext": ".rjs",
+    "type": "application/vnd.rn-realsystem-rjs"
+  },
+  {
+    "ext": ".rjt",
+    "type": "application/vnd.rn-realsystem-rjt"
+  },
+  {
+    "ext": ".rlc",
+    "type": "application/x-rlc"
+  },
+  {
+    "ext": ".rle",
+    "type": "application/x-rle"
+  },
+  {
+    "ext": ".rm",
+    "type": "application/vnd.rn-realmedia"
+  },
+  {
+    "ext": ".rmf",
+    "type": "application/vnd.adobe.rmf"
+  },
+  {
+    "ext": ".rmi",
+    "type": "audio/mid"
+  },
+  {
+    "ext": ".rmj",
+    "type": "application/vnd.rn-realsystem-rmj"
+  },
+  {
+    "ext": ".rmm",
+    "type": "audio/x-pn-realaudio"
+  },
+  {
+    "ext": ".rmp",
+    "type": "application/vnd.rn-rn_music_package"
+  },
+  {
+    "ext": ".rms",
+    "type": "application/vnd.rn-realmedia-secure"
+  },
+  {
+    "ext": ".rmvb",
+    "type": "application/vnd.rn-realmedia-vbr"
+  },
+  {
+    "ext": ".rmx",
+    "type": "application/vnd.rn-realsystem-rmx"
+  },
+  {
+    "ext": ".rnx",
+    "type": "application/vnd.rn-realplayer"
+  },
+  {
+    "ext": ".rp",
+    "type": "image/vnd.rn-realpix"
+  },
+  {
+    "ext": ".rpm",
+    "type": "audio/x-pn-realaudio-plugin"
+  },
+  {
+    "ext": ".rsml",
+    "type": "application/vnd.rn-rsml"
+  },
+  {
+    "ext": ".rt",
+    "type": "text/vnd.rn-realtext"
+  },
+  {
+    "ext": ".rtf",
+    "type": "application/msword"
+  },
+  {
+    "ext": ".rtf",
+    "type": "application/x-rtf"
+  },
+  {
+    "ext": ".rv",
+    "type": "video/vnd.rn-realvideo"
+  },
+  {
+    "ext": ".sam",
+    "type": "application/x-sam"
+  },
+  {
+    "ext": ".sat",
+    "type": "application/x-sat"
+  },
+  {
+    "ext": ".sdp",
+    "type": "application/sdp"
+  },
+  {
+    "ext": ".sdw",
+    "type": "application/x-sdw"
+  },
+  {
+    "ext": ".sit",
+    "type": "application/x-stuffit"
+  },
+  {
+    "ext": ".slb",
+    "type": "application/x-slb"
+  },
+  {
+    "ext": ".sld",
+    "type": "application/x-sld"
+  },
+  {
+    "ext": ".slk",
+    "type": "drawing/x-slk"
+  },
+  {
+    "ext": ".smi",
+    "type": "application/smil"
+  },
+  {
+    "ext": ".smil",
+    "type": "application/smil"
+  },
+  {
+    "ext": ".smk",
+    "type": "application/x-smk"
+  },
+  {
+    "ext": ".snd",
+    "type": "audio/basic"
+  },
+  {
+    "ext": ".sol",
+    "type": "text/plain"
+  },
+  {
+    "ext": ".sor",
+    "type": "text/plain"
+  },
+  {
+    "ext": ".spc",
+    "type": "application/x-pkcs7-certificates"
+  },
+  {
+    "ext": ".spl",
+    "type": "application/futuresplash"
+  },
+  {
+    "ext": ".spp",
+    "type": "text/xml"
+  },
+  {
+    "ext": ".ssm",
+    "type": "application/streamingmedia"
+  },
+  {
+    "ext": ".sst",
+    "type": "application/vnd.ms-pki.certstore"
+  },
+  {
+    "ext": ".stl",
+    "type": "application/vnd.ms-pki.stl"
+  },
+  {
+    "ext": ".stm",
+    "type": "text/html"
+  },
+  {
+    "ext": ".sty",
+    "type": "application/x-sty"
+  },
+  {
+    "ext": ".svg",
+    "type": "text/xml"
+  },
+  {
+    "ext": ".swf",
+    "type": "application/x-shockwave-flash"
+  },
+  {
+    "ext": ".tdf",
+    "type": "application/x-tdf"
+  },
+  {
+    "ext": ".tg4",
+    "type": "application/x-tg4"
+  },
+  {
+    "ext": ".tga",
+    "type": "application/x-tga"
+  },
+  {
+    "ext": ".tif",
+    "type": "image/tiff"
+  },
+  {
+    "ext": ".tif",
+    "type": "application/x-tif"
+  },
+  {
+    "ext": ".tiff",
+    "type": "image/tiff"
+  },
+  {
+    "ext": ".tld",
+    "type": "text/xml"
+  },
+  {
+    "ext": ".top",
+    "type": "drawing/x-top"
+  },
+  {
+    "ext": ".torrent",
+    "type": "application/x-bittorrent"
+  },
+  {
+    "ext": ".tsd",
+    "type": "text/xml"
+  },
+  {
+    "ext": ".txt",
+    "type": "text/plain"
+  },
+  {
+    "ext": ".uin",
+    "type": "application/x-icq"
+  },
+  {
+    "ext": ".uls",
+    "type": "text/iuls"
+  },
+  {
+    "ext": ".vcf",
+    "type": "text/x-vcard"
+  },
+  {
+    "ext": ".vda",
+    "type": "application/x-vda"
+  },
+  {
+    "ext": ".vdx",
+    "type": "application/vnd.visio"
+  },
+  {
+    "ext": ".vml",
+    "type": "text/xml"
+  },
+  {
+    "ext": ".vpg",
+    "type": "application/x-vpeg005"
+  },
+  {
+    "ext": ".vsd",
+    "type": "application/vnd.visio"
+  },
+  {
+    "ext": ".vsd",
+    "type": "application/x-vsd"
+  },
+  {
+    "ext": ".vss",
+    "type": "application/vnd.visio"
+  },
+  {
+    "ext": ".vst",
+    "type": "application/vnd.visio"
+  },
+  {
+    "ext": ".vst",
+    "type": "application/x-vst"
+  },
+  {
+    "ext": ".vsw",
+    "type": "application/vnd.visio"
+  },
+  {
+    "ext": ".vsx",
+    "type": "application/vnd.visio"
+  },
+  {
+    "ext": ".vtx",
+    "type": "application/vnd.visio"
+  },
+  {
+    "ext": ".vxml",
+    "type": "text/xml"
+  },
+  {
+    "ext": ".wav",
+    "type": "audio/wav"
+  },
+  {
+    "ext": ".wax",
+    "type": "audio/x-ms-wax"
+  },
+  {
+    "ext": ".wb1",
+    "type": "application/x-wb1"
+  },
+  {
+    "ext": ".wb2",
+    "type": "application/x-wb2"
+  },
+  {
+    "ext": ".wb3",
+    "type": "application/x-wb3"
+  },
+  {
+    "ext": ".wbmp",
+    "type": "image/vnd.wap.wbmp"
+  },
+  {
+    "ext": ".wiz",
+    "type": "application/msword"
+  },
+  {
+    "ext": ".wk3",
+    "type": "application/x-wk3"
+  },
+  {
+    "ext": ".wk4",
+    "type": "application/x-wk4"
+  },
+  {
+    "ext": ".wkq",
+    "type": "application/x-wkq"
+  },
+  {
+    "ext": ".wks",
+    "type": "application/x-wks"
+  },
+  {
+    "ext": ".wm",
+    "type": "video/x-ms-wm"
+  },
+  {
+    "ext": ".wma",
+    "type": "audio/x-ms-wma"
+  },
+  {
+    "ext": ".wmd",
+    "type": "application/x-ms-wmd"
+  },
+  {
+    "ext": ".wmf",
+    "type": "application/x-wmf"
+  },
+  {
+    "ext": ".wml",
+    "type": "text/vnd.wap.wml"
+  },
+  {
+    "ext": ".wmv",
+    "type": "video/x-ms-wmv"
+  },
+  {
+    "ext": ".wmx",
+    "type": "video/x-ms-wmx"
+  },
+  {
+    "ext": ".wmz",
+    "type": "application/x-ms-wmz"
+  },
+  {
+    "ext": ".wp6",
+    "type": "application/x-wp6"
+  },
+  {
+    "ext": ".wpd",
+    "type": "application/x-wpd"
+  },
+  {
+    "ext": ".wpg",
+    "type": "application/x-wpg"
+  },
+  {
+    "ext": ".wpl",
+    "type": "application/vnd.ms-wpl"
+  },
+  {
+    "ext": ".wq1",
+    "type": "application/x-wq1"
+  },
+  {
+    "ext": ".wr1",
+    "type": "application/x-wr1"
+  },
+  {
+    "ext": ".wri",
+    "type": "application/x-wri"
+  },
+  {
+    "ext": ".wrk",
+    "type": "application/x-wrk"
+  },
+  {
+    "ext": ".ws",
+    "type": "application/x-ws"
+  },
+  {
+    "ext": ".ws2",
+    "type": "application/x-ws"
+  },
+  {
+    "ext": ".wsc",
+    "type": "text/scriptlet"
+  },
+  {
+    "ext": ".wsdl",
+    "type": "text/xml"
+  },
+  {
+    "ext": ".wvx",
+    "type": "video/x-ms-wvx"
+  },
+  {
+    "ext": ".xdp",
+    "type": "application/vnd.adobe.xdp"
+  },
+  {
+    "ext": ".xdr",
+    "type": "text/xml"
+  },
+  {
+    "ext": ".xfd",
+    "type": "application/vnd.adobe.xfd"
+  },
+  {
+    "ext": ".xfdf",
+    "type": "application/vnd.adobe.xfdf"
+  },
+  {
+    "ext": ".xhtml",
+    "type": "text/html"
+  },
+  {
+    "ext": ".xls",
+    "type": "application/vnd.ms-excel"
+  },
+  {
+    "ext": ".xls",
+    "type": "application/x-xls"
+  },
+  {
+    "ext": ".xlw",
+    "type": "application/x-xlw"
+  },
+  {
+    "ext": ".xml",
+    "type": "text/xml"
+  },
+  {
+    "ext": ".xpl",
+    "type": "audio/scpls"
+  },
+  {
+    "ext": ".xq",
+    "type": "text/xml"
+  },
+  {
+    "ext": ".xql",
+    "type": "text/xml"
+  },
+  {
+    "ext": ".xquery",
+    "type": "text/xml"
+  },
+  {
+    "ext": ".xsd",
+    "type": "text/xml"
+  },
+  {
+    "ext": ".xsl",
+    "type": "text/xml"
+  },
+  {
+    "ext": ".xslt",
+    "type": "text/xml"
+  },
+  {
+    "ext": ".xwd",
+    "type": "application/x-xwd"
+  },
+  {
+    "ext": ".x_b",
+    "type": "application/x-x_b"
+  },
+  {
+    "ext": ".sis",
+    "type": "application/vnd.symbian.install"
+  },
+  {
+    "ext": ".sisx",
+    "type": "application/vnd.symbian.install"
+  },
+  {
+    "ext": ".x_t",
+    "type": "application/x-x_t"
+  },
+  {
+    "ext": ".ipa",
+    "type": "application/vnd.iphone"
+  },
+  {
+    "ext": ".apk",
+    "type": "application/vnd.android.package-archive"
+  },
+  {
+    "ext": ".xap",
+    "type": "application/x-silverlight-app"
+  }
+]

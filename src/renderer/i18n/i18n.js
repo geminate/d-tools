@@ -19,6 +19,7 @@ const i18n = new VueI18n({
             "systemInfo": "System info",
             "alreadyCopy": "Copied to clipboard: ",
             "qrcode": "Generate QrCode",
+            "contrastTable":"Contrast table",
             ...enLocale
         },
         zh_CN: {
@@ -31,6 +32,7 @@ const i18n = new VueI18n({
             "systemInfo": "系统信息",
             "qrcode": "生成二维码",
             "alreadyCopy": "已复制至剪贴板：",
+            "contrastTable":"常用对照表",
             ...zhLocale
         }
     }

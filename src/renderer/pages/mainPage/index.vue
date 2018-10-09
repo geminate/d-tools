@@ -34,6 +34,10 @@
                 <i class="fa fa-qrcode"></i>
             </content-box>
 
+            <content-box :title="$t('contrastTableTitle')" :detail="$t('contrastTableInfo')" href="/contrastTable">
+                <i class="fa fa-table"></i>
+            </content-box>
+
             <transition-group name="fade">
                 <content-box type="custom"
                              v-for="(item,i) in shortcutList"
@@ -73,6 +77,8 @@
     "systemInfoInfo": "IP addres, memory info",
     "qrcodeTitle": "Generate qr code",
     "qrcodeInfo": "Generate Text/URL to qr code",
+    "contrastTableTitle":"Contrast table",
+    "contrastTableInfo":"HTTP Content-type/status codes, Keyboard key code, HTML escape characters",
     "choose": "choose file"
     },
 
@@ -91,6 +97,8 @@
     "systemInfoInfo": "IP地址、内存使用情况等",
     "qrcodeTitle": "生成二维码",
     "qrcodeInfo": "文本、网址生成二维码",
+    "contrastTableTitle":"常用对照表",
+    "contrastTableInfo":"HTTP Content-type/状态码, 键盘按键码, HTML 转义字符",
     "choose": "请选择想要添加的文件"
     }}
 </i18n>
