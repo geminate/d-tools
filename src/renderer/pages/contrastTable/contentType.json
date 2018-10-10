@@ -1,6 +1,6 @@
 ﻿[
   {
-    "ext": ".*（ 二进制流，不知道下载文件类型）",
+    "ext": ".*",
     "type": "application/octet-stream"
   },
   {

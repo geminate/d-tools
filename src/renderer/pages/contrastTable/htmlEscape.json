@@ -1,0 +1,347 @@
+﻿[
+  {
+    "char": "\"",
+    "decimal": "&#34;",
+    "escape": "&quot;"
+  },
+  {
+    "char": "&",
+    "decimal": "&#38;",
+    "escape": "&amp;"
+  },
+  {
+    "char": "<",
+    "decimal": "&#60;",
+    "escape": "&lt;"
+  },
+  {
+    "char": ">",
+    "decimal": "&#62;",
+    "escape": "&gt;"
+  },
+  {
+    "char": "non-breaking space",
+    "decimal": "&#160;",
+    "escape": "&nbsp;"
+  },
+  {
+    "char": "?",
+    "decimal": "&#161;",
+    "escape": "&iexcl;"
+  },
+  {
+    "char": "Á",
+    "decimal": "&#193;",
+    "escape": "&Aacute;"
+  },
+  {
+    "char": "￠",
+    "decimal": "&#162;",
+    "escape": "&cent;"
+  },
+  {
+    "char": "Â",
+    "decimal": "&#194;",
+    "escape": "&circ;"
+  },
+  {
+    "char": "￡",
+    "decimal": "&#163;",
+    "escape": "&pound;"
+  },
+  {
+    "char": "Ã",
+    "decimal": "&#195;",
+    "escape": "&Atilde;"
+  },
+  {
+    "char": "¤",
+    "decimal": "&#164;",
+    "escape": "&curren;"
+  },
+  {
+    "char": "Ä",
+    "decimal": "&#196;",
+    "escape": "&Auml"
+  },
+  {
+    "char": "￥",
+    "decimal": "&#165;",
+    "escape": "&yen;"
+  },
+  {
+    "char": "Å",
+    "decimal": "&#197;",
+    "escape": "&ring;"
+  },
+  {
+    "char": "|",
+    "decimal": "&#166;",
+    "escape": "&brvbar;"
+  },
+  {
+    "char": "Æ",
+    "decimal": "&#198;",
+    "escape": "&AElig;"
+  },
+  {
+    "char": "§",
+    "decimal": "&#167;",
+    "escape": "&sect;"
+  },
+  {
+    "char": "Ç",
+    "decimal": "&#199;",
+    "escape": "&Ccedil;"
+  },
+  {
+    "char": "¨",
+    "decimal": "&#168;",
+    "escape": "&uml;"
+  },
+  {
+    "char": "È",
+    "decimal": "&#200;",
+    "escape": "&Egrave;"
+  },
+  {
+    "char": "©",
+    "decimal": "&#169;",
+    "escape": "&copy;"
+  },
+  {
+    "char": "É",
+    "decimal": "&#201;",
+    "escape": "&Eacute;"
+  },
+  {
+    "char": "a",
+    "decimal": "&#170;",
+    "escape": "&ordf;"
+  },
+  {
+    "char": "Ê",
+    "decimal": "&#202;",
+    "escape": "&Ecirc;"
+  },
+  {
+    "char": "?",
+    "decimal": "&#171;",
+    "escape": "&laquo;"
+  },
+  {
+    "char": "Ë",
+    "decimal": "&#203;",
+    "escape": "&Euml;"
+  },
+  {
+    "char": "?",
+    "decimal": "&#172;",
+    "escape": "&not;"
+  },
+  {
+    "char": "Ì",
+    "decimal": "&#204;",
+    "escape": "&Igrave;"
+  },
+  {
+    "char": "/x7f",
+    "decimal": "&#173;",
+    "escape": "&shy;"
+  },
+  {
+    "char": "Í",
+    "decimal": "&#205;",
+    "escape": "&Iacute;"
+  },
+  {
+    "char": "®",
+    "decimal": "&#174;",
+    "escape": "&reg;"
+  },
+  {
+    "char": "Î",
+    "decimal": "&#206;",
+    "escape": "&Icirc;"
+  },
+  {
+    "char": "ˉ",
+    "decimal": "&#175;",
+    "escape": "&macr;"
+  },
+  {
+    "char": "Ï",
+    "decimal": "&#207;",
+    "escape": "&Iuml;"
+  },
+  {
+    "char": "°",
+    "decimal": "&#176;",
+    "escape": "&deg;"
+  },
+  {
+    "char": "Ð",
+    "decimal": "&#208;",
+    "escape": "&ETH;"
+  },
+  {
+    "char": "±",
+    "decimal": "&#177;",
+    "escape": "&plusmn;"
+  },
+  {
+    "char": "Ñ",
+    "decimal": "&#209;",
+    "escape": "&Ntilde;"
+  },
+  {
+    "char": "2",
+    "decimal": "&#178;",
+    "escape": "&sup2;"
+  },
+  {
+    "char": "Ò",
+    "decimal": "&#210;",
+    "escape": "&Ograve;"
+  },
+  {
+    "char": "3",
+    "decimal": "&#179;",
+    "escape": "&sup3;"
+  },
+  {
+    "char": "Ó",
+    "decimal": "&#211;",
+    "escape": "&Oacute;"
+  },
+  {
+    "char": "′",
+    "decimal": "&#180;",
+    "escape": "&acute;"
+  },
+  {
+    "char": "Ô",
+    "decimal": "&#212;",
+    "escape": "&Ocirc;"
+  },
+  {
+    "char": "μ",
+    "decimal": "&#181;",
+    "escape": "&micro;"
+  },
+  {
+    "char": "Õ",
+    "decimal": "&#213;",
+    "escape": "&Otilde;"
+  },
+  {
+    "char": "?",
+    "decimal": "&#182;",
+    "escape": "&para;"
+  },
+  {
+    "char": "Ö",
+    "decimal": "&#214;",
+    "escape": "&Ouml;"
+  },
+  {
+    "char": "·",
+    "decimal": "&#183;",
+    "escape": "&middot;"
+  },
+  {
+    "char": "&times;",
+    "decimal": "&#215;",
+    "escape": "&times;"
+  },
+  {
+    "char": "?",
+    "decimal": "&#184;",
+    "escape": "&cedil;"
+  },
+  {
+    "char": "Ø",
+    "decimal": "&#216;",
+    "escape": "&Oslash;"
+  },
+  {
+    "char": "1",
+    "decimal": "&#185;",
+    "escape": "&sup1;"
+  },
+  {
+    "char": "Ù",
+    "decimal": "&#217;",
+    "escape": "&Ugrave;"
+  },
+  {
+    "char": "o",
+    "decimal": "&#186;",
+    "escape": "&ordm;"
+  },
+  {
+    "char": "Ú",
+    "decimal": "&#218;",
+    "escape": "&Uacute;"
+  },
+  {
+    "char": "?",
+    "decimal": "&#187;",
+    "escape": "&raquo;"
+  },
+  {
+    "char": "Û",
+    "decimal": "&#219;",
+    "escape": "&Ucirc;"
+  },
+  {
+    "char": "?",
+    "decimal": "&#188;",
+    "escape": "&frac14;"
+  },
+  {
+    "char": "Ü",
+    "decimal": "&#220;",
+    "escape": "&Uuml;"
+  },
+  {
+    "char": "?",
+    "decimal": "&#189;",
+    "escape": "&frac12;"
+  },
+  {
+    "char": "Ý",
+    "decimal": "&#221;",
+    "escape": "&Yacute;"
+  },
+  {
+    "char": "?",
+    "decimal": "&#190;",
+    "escape": "&frac34;"
+  },
+  {
+    "char": "Þ",
+    "decimal": "&#222;",
+    "escape": "&THORN;"
+  },
+  {
+    "char": "?",
+    "decimal": "&#191;",
+    "escape": "&iquest;"
+  },
+  {
+    "char": "ß",
+    "decimal": "&#223;",
+    "escape": "&szlig;"
+  },
+  {
+    "char": "À",
+    "decimal": "&#192;",
+    "escape": "&Agrave;"
+  },
+  {
+    "char": "à",
+    "decimal": "&#224;",
+    "escape": "&agrave;"
+  }
+]
