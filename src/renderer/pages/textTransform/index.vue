@@ -8,6 +8,7 @@
                     <el-radio size="mini" v-model="codeType" label="2" border>MD5</el-radio>
                     <el-radio size="mini" v-model="codeType" label="3" border>URI</el-radio>
                     <el-radio size="mini" v-model="codeType" label="4" border>URIComponent</el-radio>
+                    <el-radio size="mini" v-model="codeType" label="5" border>Unicode</el-radio>
                 </div>
                 <div class="btn-container">
                     <el-button size="mini" type="success" @click="encode">{{$t('encrypt')}}</el-button>
@@ -118,6 +119,7 @@
                 this.codeType == '2' && this.md5Encode();
                 this.codeType == '3' && this.uriEncode();
                 this.codeType == '4' && this.uriComponentEncode();
+                this.codeType == '5' && this.unicodeEncode();
             },
             decode() {
                 this.initMessage();
@@ -125,6 +127,7 @@
                 this.codeType == '1' && this.base64Decode();
                 this.codeType == '3' && this.uriDecode
                 this.codeType == '4' && this.uriComponentDecode();
+                this.codeType == '5' && this.unicodeDecode();
             },
             format() {
                 this.initMessage();
@@ -178,6 +181,16 @@
             uriComponentDecode() {
                 this.text = decodeURIComponent(this.text);
                 this.setMessage(`URIComponent ${this.$t('decryptSuccess')}！`, "success");
+            },
+            unicodeEncode() {
+                let result = '';
+                for (let i = 0; i < this.text.length; i++) {
+                    result += "\\u" + this.text.charCodeAt(i).toString(16);
+                }
+                this.text = result;
+            },
+            unicodeDecode() {
+                this.text = unescape(this.text.replace(/\\u/g, '%u'));
             }
         }
     }
