@@ -125,7 +125,7 @@
                 this.initMessage();
                 this.history.push(this.text);
                 this.codeType == '1' && this.base64Decode();
-                this.codeType == '3' && this.uriDecode
+                this.codeType == '3' && this.uriDecode();
                 this.codeType == '4' && this.uriComponentDecode();
                 this.codeType == '5' && this.unicodeDecode();
             },
